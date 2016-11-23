@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Адамант](https://up.htmlacademy.ru/adaptive/9/user/251115).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Кравченко](https://htmlacademy.ru/profile/id13921).
 
 ---
 
