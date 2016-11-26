@@ -10,7 +10,7 @@
   <header class="page-header">
     <nav class="main-menu">
       <!--Ты написал, что сюда вынести спан. Я так понял, что без обёртки?-->
-      <span class="main-menu__button main-menu__button--closed"></span>
+      <span class="main-menu__btn main-menu__btn--closed"></span>
 
 
       <ul class="main-menu__list main-menu__list--closed main-menu__list--nojs">
@@ -21,8 +21,8 @@
         </li>
 
 
-        <li class="main-menu__item main-menu__item--active"><a class="main-menu__link">Каталог товаров</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="form.html">Вязание на заказ</a></li>
+        <li class="main-menu__item"><a class="main-menu__link">Каталог товаров</a></li>
+        <li class="main-menu__item"><a class="main-menu__link main-menu__link--active" href="form.html">Вязание на заказ</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="#">Поиск по сайту</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="#">Корзина: пока пуста</a></li>
       </ul>
@@ -36,16 +36,15 @@
 
 
   <main class="page-main">
-    <!--Может этот абзац внутрь формы? Типа подзаголовка? А то он как-то неприкаянно смотрится-->
     <p class="promo-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
       свяжемся с вами, чтобы уточнить детали.</p>
 
 
     <form class="order-form" action="https://echo.htmlacademy.ru/" method="POST">
       <fieldset class="order-form__section">
-        <!--А зачем здесь эта обёртка? Сам fieldset разве недостаточная обёртка? Зачем он тогда нужен нам?-->
+        <!--А зачем здесь эта обёртка? Сам fieldset разве недостаточная обёртка?-->
         <div class="order-form__inner">
-          <!--Если делаем эту обёртку, то legend нельзя уже? Редактор ругается, что legend не в fieldset лежит.-->
+          <!--Если делаем эту обёртку, то legend нельзя уже? Legend же теперь не в fieldset лежит.-->
           <legend class="order-form__title">Тип</legend>
 
 
