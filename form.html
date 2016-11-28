@@ -7,11 +7,11 @@
 <body>
 
 
-  <header class="page-header">
-    <nav class="main-menu">
-      <!--Ты написал, что сюда вынести спан. Я так понял, что без обёртки?-->
-      <span class="main-menu__btn main-menu__btn--closed"></span>
 
+  <header class="page-header">
+
+    <nav class="main-menu">
+      <span class="main-menu__btn main-menu__btn--closed"></span>
 
       <ul class="main-menu__list main-menu__list--closed main-menu__list--nojs">
         <li class="main-menu__item main-menu__item--logo">
@@ -19,8 +19,6 @@
             <img src="http://placehold.it/86x35" width="86" height="35" alt="Mishka">
           </a>
         </li>
-
-
         <li class="main-menu__item"><a class="main-menu__link">Каталог товаров</a></li>
         <li class="main-menu__item"><a class="main-menu__link main-menu__link--active" href="form.html">Вязание на заказ</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="#">Поиск по сайту</a></li>
@@ -28,28 +26,26 @@
       </ul>
     </nav>
 
-
     <div class="intro">
       <h1 class="intro__title">Вязание на заказ</h1>
     </div>
   </header>
 
 
+
   <main class="page-main">
     <p class="promo-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
       свяжемся с вами, чтобы уточнить детали.</p>
 
-
     <form class="order-form" action="https://echo.htmlacademy.ru/" method="POST">
+
+
+
       <fieldset class="order-form__section">
-        <!--А зачем здесь эта обёртка? Сам fieldset разве недостаточная обёртка?-->
         <div class="order-form__inner">
-          <!--Если делаем эту обёртку, то legend нельзя уже? Legend же теперь не в fieldset лежит.-->
           <legend class="order-form__title">Тип</legend>
 
-
           <div class="order-form__group">
-            <!--Тот же вопрос про пространство имен для id-->
             <input class="order-form__input-radio" type="radio" name="type" id="type-1">
             <label class="order-form__radio" for="type-1">Аксессуар для интерьера</label>
             <input class="order-form__input-radio" type="radio" name="type" id="type-2">
@@ -59,10 +55,10 @@
       </fieldset>
 
 
+
       <fieldset class="order-form__section">
         <div class="order-form__inner">
           <legend class="order-form__title">Цвет</legend>
-
 
           <div class="order-form__group">
             <input class="order-form__input-checkbox" id="checkbox1" type="checkbox" name="color-white" checked>
@@ -82,10 +78,10 @@
       </fieldset>
 
 
+
       <fieldset class="order-form__section">
         <div class="order-form__inner">
           <legend class="order-form__title">ФИО</legend>
-
 
           <div class="order-form__group">
             <input class="order-form__input-text" id="firstname" type="text" name="firstname" placeholder="Введите ваше имя*" required>
@@ -99,6 +95,7 @@
       </fieldset>
 
 
+
       <fieldset class="order-form__section">
         <div class="order-form__inner">
           <legend class="order-form__title">Тел</legend>
@@ -107,7 +104,6 @@
           </div>
         </div>
 
-
         <div class="order-form__inner">
           <legend class="order-form__title">E-mail</legend>
           <div class="order-form__group">
@@ -115,6 +111,7 @@
           </div>
         </div>
       </fieldset>
+
 
 
       <fieldset class="order-form__section">
@@ -127,14 +124,14 @@
       </fieldset>
 
 
+
       <div class="order-form__footer">
         <p class="order-form__footnote">*Поля обязательны для заполнения</p>
         <button class="order-form__btn btn" type="submit">Отправить заказ</button>
       </div>
     </form>
-
-
   </main>
+
 
 
   <footer class="page-footer">
@@ -143,7 +140,6 @@
       <a class="social__btn social__btn--facebook" href="#">Мы в Фейсбуке</a>
       <a class="social__btn social__btn__twitter" href="#">Мы в Твиттере</a>
     </p>
-
 
     <p class="copyright">
       Разработано

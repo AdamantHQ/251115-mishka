@@ -7,11 +7,10 @@
 <body>
 
 
+
   <header class="page-header">
     <nav class="main-menu">
-      <!--Ты написал, что сюда вынести спан. Я так понял, что без обёртки?-->
       <span class="main-menu__btn main-menu__btn--closed"></span>
-
 
       <ul class="main-menu__list main-menu__list--closed main-menu__list--nojs">
         <li class="main-menu__item main-menu__item--logo">
@@ -20,7 +19,6 @@
           </a>
         </li>
 
-
         <li class="main-menu__item"><a class="main-menu__link main-menu__link--active">Каталог товаров</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="form.html">Вязание на заказ</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="#">Поиск по сайту</a></li>
@@ -28,15 +26,16 @@
       </ul>
     </nav>
 
-
     <div class="intro">
       <h1 class="intro__title">Каталог товаров</h1>
     </div>
   </header>
 
 
+
   <main class="page-main">
     <section class="catalog">
+
 
 
       <article class="catalog-item">
@@ -44,22 +43,19 @@
           <img class="catalog-item__picture" src="http://placehold.it/260x195" width="260" height="195" alt="Вязаный заяц">
         </a>
 
-
         <div class="catalog-item__description">
           <div class="catalog-item__description-header">
-            <!--Как я тебя понял, здесь без заголовка, просто а?-->
             <a class="catalog-item__title" href="#">Зайчик-попрыгайчик</a>
             <p class="catalog-item__text">Рост 30 см, вес 200 г</p>
           </div>
 
-
           <div class="catalog-item__description-footer">
-            <!--Почему цена это ссылка? В спецификации отмечено, что ссылки здесь - это изображение, название и иконка корзины-->
-            <a class="catalog-item__price" href="#">1200 руб.</a>
+            <span class="catalog-item__price">1200 руб.</span>
             <a class="catalog-item__cart" href="#">Корзина</a>
           </div>
         </div>
       </article>
+
 
 
       <article class="catalog-item">
@@ -67,20 +63,19 @@
           <img class="catalog-item__picture" src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
         </a>
 
-
         <div class="catalog-item__description">
           <div class="catalog-item__description-header">
             <a class="catalog-item__title" href="#">Корзинка для белья</a>
             <p class="catalog-item__text">Диаметр 15 см, высота 10 см</p>
           </div>
 
-
           <div class="catalog-item__description-footer">
-            <a class="catalog-item__price" href="#">690 руб.</a>
+            <span class="catalog-item__price">690 руб.</span>
             <a class="catalog-item__cart" href="#">Корзина</a>
           </div>
         </div>
       </article>
+
 
 
       <article class="catalog-item">
@@ -88,21 +83,20 @@
           <img class="catalog-item__picture" src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзина для игрушек">
         </a>
 
-
         <div class="catalog-item__description">
           <div class="catalog-item__description-header">
             <a class="catalog-item__title" href="#">Большая корзина для игрушек</a>
             <p class="catalog-item__text">Диаметр 30 см, высота 30 см</p>
           </div>
 
-
           <div class="catalog-item__description-footer">
-            <a class="catalog-item__price" href="#">1500 руб.</a>
+            <span class="catalog-item__price">1500 руб.</span>
             <a class="catalog-item__cart" href="#">Корзина</a>
           </div>
         </div>
       </article>
     </section>
+
 
 
     <section class="media">
@@ -111,12 +105,9 @@
           <h2 class="media__title">Процесс производства</h2>
         </div>
 
-
-        <!--Рука не повернулась делать класс video__video (насколько это корректно?), поэтому назвал блок media :)-->
         <div class="media__video">
           <img src="http://placehold.it/260x150" width="260" height="150" alt=""/>
         </div>
-
 
         <div class="media__footer">
           <p class="media__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, какпоявляются наши товары.</p>
@@ -127,13 +118,13 @@
   </main>
 
 
+
   <footer class="page-footer">
     <p class="social">
       <a class="social__btn social__btn--instagram" href="#">Мы в Инстаграме</a>
       <a class="social__btn social__btn--facebook" href="#">Мы в Фейсбуке</a>
       <a class="social__btn social__btn__twitter" href="#">Мы в Твиттере</a>
     </p>
-
 
     <p class="copyright">
       Разработано
@@ -142,24 +133,26 @@
   </footer>
 
 
-  <section class="page-cart page-cart--hidden">
-    <h2 class="page-cart__title">Добавить в корзину</h2>
+
+  <div class="overlay overlay--hidden"></div>
+
+  <div class="page-cart page-cart--hidden">
+    <b class="page-cart__title">Добавить в корзину</b>
     <p class="page-cart__subtitle">Выберите размер:</p>
 
-
     <form class="cart-form" action="https://echo.htmlacademy.ru/" method="POST">
-      <!--Для id использовать то же пространство имён, что и для классов, или хватит такого?-->
-      <input class="cart-form__input" type="radio" name="cart-form__size" id="size-s" checked>
-      <label for="size-s">S</label>
-      <input class="cart-form__input" type="radio" name="cart-form__size" id="size-m">
-      <label for="size-m">M</label>
-      <input class="cart-form__input" type="radio" name="cart-form__size" id="size-l">
-      <label for="size-l">L</label>
-
+      <div class="cart-form__inner">
+        <input class="cart-form__input" type="radio" name="cart-form__size" id="size-s" checked>
+        <label for="size-s">S</label>
+        <input class="cart-form__input" type="radio" name="cart-form__size" id="size-m">
+        <label for="size-m">M</label>
+        <input class="cart-form__input" type="radio" name="cart-form__size" id="size-l">
+        <label for="size-l">L</label>
+      </div>
 
       <button class="cart-form__btn" type="submit">Добавить</button>
     </form>
-  </section>
+  </div>
 
 </body>
 </html>
