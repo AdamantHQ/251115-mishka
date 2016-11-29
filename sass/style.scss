@@ -1,5 +1,23 @@
-@import "normalize.scss";
-
 @import "variables.scss";
 @import "mixins.scss";
 
+@import "normalize.scss";
+
+@import "/sass/blocks/common/main-menu.scss";
+@import "/sass/blocks/common/intro.scss";
+@import "/sass/blocks/common/social.scss";
+@import "/sass/blocks/common/copyright.scss";
+@import "/sass/blocks/common/btn.scss";
+@import "/sass/blocks/common/overlay.scss";
+@import "/sass/blocks/common/page-cart.scss";
+
+@import "/blocks/index/about.scss";
+@import "/blocks/index/category.scss";
+@import "/blocks/index/contacts.scss";
+@import "/blocks/index/featured.scss";
+@import "/blocks/index/reviews.scss";
+
+@import "/blocks/form/order-form.scss";
+
+@import "/blocks/catalog/catalog-item.scss";
+@import "/blocks/catalog/media.scss";
