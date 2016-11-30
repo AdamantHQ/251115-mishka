@@ -1,0 +1,31 @@
+.catalog-item {
+  margin: 30px;
+  @include border;
+}
+
+.catalog-item__description {
+  margin: 30px;
+}
+
+.catalog-item__description-header {
+  border-bottom: 1px solid $color-border;
+}
+
+.catalog-item__description-footer {
+  margin: 30px;
+}
+
+.catalog-item__title {
+  display: block;
+  @include title(17px, 24px);
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.catalog-item__text {
+  @include text(13px, 30px);
+}
+
+.catalog-item__price {
+  @include title(15px, 24px);
+}

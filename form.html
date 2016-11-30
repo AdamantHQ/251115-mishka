@@ -2,7 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка: Милые штуки ручной работы для дома</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -16,11 +18,11 @@
       <ul class="main-menu__list main-menu__list--closed main-menu__list--nojs">
         <li class="main-menu__item main-menu__item--logo">
           <a class="main-menu__logo" href="index.html">
-            <img src="http://placehold.it/86x35" width="86" height="35" alt="Mishka">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
           </a>
         </li>
-        <li class="main-menu__item"><a class="main-menu__link">Каталог товаров</a></li>
-        <li class="main-menu__item"><a class="main-menu__link main-menu__link--active" href="form.html">Вязание на заказ</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="catalog.html">Каталог товаров</a></li>
+        <li class="main-menu__item"><a class="main-menu__link main-menu__link--active">Вязание на заказ</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="#">Поиск по сайту</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="#">Корзина: пока пуста</a></li>
       </ul>
@@ -29,17 +31,19 @@
     <div class="intro">
       <h1 class="intro__title">Вязание на заказ</h1>
     </div>
+
   </header>
 
 
 
   <main class="page-main">
-    <p class="promo-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
-      свяжемся с вами, чтобы уточнить детали.</p>
+
+
 
     <form class="order-form" action="https://echo.htmlacademy.ru/" method="POST">
 
-
+      <p class="order-form__promo-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+        свяжемся с вами, чтобы уточнить детали.</p>
 
       <fieldset class="order-form__section">
         <div class="order-form__inner">
@@ -84,12 +88,12 @@
           <legend class="order-form__title">ФИО</legend>
 
           <div class="order-form__group">
-            <input class="order-form__input-text" id="firstname" type="text" name="firstname" placeholder="Введите ваше имя*" required>
             <label class="order-form__text" for="firstname">Имя:</label>
-            <input class="order-form__input-text" id="lastname" type="text" name="lastname" placeholder="Введите вашу фамилию*" required>
+            <input class="order-form__input-text" id="firstname" type="text" name="firstname" placeholder="Введите ваше имя*" required>
             <label class="order-form__text" for="lastname">Фамилия:</label>
-            <input class="order-form__input-text" id="middlename" type="text" name="middlename" placeholder="Отчество, если желаете">
+            <input class="order-form__input-text" id="lastname" type="text" name="lastname" placeholder="Введите вашу фамилию*" required>
             <label class="order-form__text" for="middlename">Отчество:</label>
+            <input class="order-form__input-text" id="middlename" type="text" name="middlename" placeholder="Отчество, если желаете">
           </div>
         </div>
       </fieldset>
@@ -118,7 +122,7 @@
         <div class="order-form__inner">
           <legend class="order-form__title">Доп</legend>
           <div class="order-form__group">
-            <textarea class="order-form__textarea" name="extra" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="order-form__textarea" name="extra" cols="24" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </div>
       </fieldset>

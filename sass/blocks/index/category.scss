@@ -1,0 +1,21 @@
+.category {
+  @include ul-reset;
+}
+
+.category__item {
+  min-height: 103px;
+}
+
+.category__link {
+  display: block;
+  text-decoration: none;
+  padding: 27.5px 50% 27.5px 30px;
+  @include text(19px, 24px, 700, $color-contrast);
+
+  &--interior {
+    background: $color-secondary;
+  }
+  &--toys {
+    background: #56c3b2;
+  }
+}

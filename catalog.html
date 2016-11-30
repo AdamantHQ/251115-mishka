@@ -2,23 +2,25 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка: Милые штуки ручной работы для дома</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 
 
   <header class="page-header">
+
     <nav class="main-menu">
       <span class="main-menu__btn main-menu__btn--closed"></span>
 
       <ul class="main-menu__list main-menu__list--closed main-menu__list--nojs">
         <li class="main-menu__item main-menu__item--logo">
           <a class="main-menu__logo" href="index.html">
-            <img src="http://placehold.it/86x35" width="86" height="35" alt="Mishka">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
           </a>
         </li>
-
         <li class="main-menu__item"><a class="main-menu__link main-menu__link--active">Каталог товаров</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="form.html">Вязание на заказ</a></li>
         <li class="main-menu__item"><a class="main-menu__link" href="#">Поиск по сайту</a></li>
@@ -29,6 +31,7 @@
     <div class="intro">
       <h1 class="intro__title">Каталог товаров</h1>
     </div>
+
   </header>
 
 
@@ -40,7 +43,7 @@
 
       <article class="catalog-item">
         <a class="catalog-item__link" href="#">
-          <img class="catalog-item__picture" src="http://placehold.it/260x195" width="260" height="195" alt="Вязаный заяц">
+          <img class="catalog-item__picture" src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Вязаный заяц">
         </a>
 
         <div class="catalog-item__description">
@@ -60,7 +63,7 @@
 
       <article class="catalog-item">
         <a class="catalog-item__link" href="#">
-          <img class="catalog-item__picture" src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
+          <img class="catalog-item__picture" src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
         </a>
 
         <div class="catalog-item__description">
@@ -80,7 +83,7 @@
 
       <article class="catalog-item">
         <a class="catalog-item__link" href="#">
-          <img class="catalog-item__picture" src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзина для игрушек">
+          <img class="catalog-item__picture" src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзина для игрушек">
         </a>
 
         <div class="catalog-item__description">
@@ -106,11 +109,11 @@
         </div>
 
         <div class="media__video">
-          <img src="http://placehold.it/260x150" width="260" height="150" alt=""/>
+          <img src="img/video-mobile@1x.jpg" width="260" height="150" alt=""/>
         </div>
 
         <div class="media__footer">
-          <p class="media__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, какпоявляются наши товары.</p>
+          <p class="media__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a class="media__btn btn" href="#">Сделать заказ</a>
         </div>
       </div>
@@ -137,21 +140,23 @@
   <div class="overlay overlay--hidden"></div>
 
   <div class="page-cart page-cart--hidden">
+
     <b class="page-cart__title">Добавить в корзину</b>
     <p class="page-cart__subtitle">Выберите размер:</p>
 
-    <form class="cart-form" action="https://echo.htmlacademy.ru/" method="POST">
-      <div class="cart-form__inner">
-        <input class="cart-form__input" type="radio" name="cart-form__size" id="size-s" checked>
-        <label for="size-s">S</label>
-        <input class="cart-form__input" type="radio" name="cart-form__size" id="size-m">
-        <label for="size-m">M</label>
-        <input class="cart-form__input" type="radio" name="cart-form__size" id="size-l">
-        <label for="size-l">L</label>
+    <form class="page-cart__form" action="https://echo.htmlacademy.ru/" method="POST">
+      <div class="page-cart__form-inner">
+        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-s" checked>
+        <label class="page-cart__radio" for="size-s">S</label>
+        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-m">
+        <label class="page-cart__radio" for="size-m">M</label>
+        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-l">
+        <label class="page-cart__radio" for="size-l">L</label>
       </div>
 
-      <button class="cart-form__btn" type="submit">Добавить</button>
+      <button class="page-cart__btn" type="submit">Добавить</button>
     </form>
+
   </div>
 
 </body>
