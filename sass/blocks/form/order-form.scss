@@ -1,0 +1,19 @@
+.order-form {
+  margin: 30px;
+}
+
+.order-form__promo-text {
+  @include text(13px, 24px);
+}
+
+.order-form__title {
+  @include subheader;
+}
+
+.order-form__group {
+  @include title(17px, 18px);
+}
+
+.order-form__footer {
+  @include text(14px, 16px);
+}

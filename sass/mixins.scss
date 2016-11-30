@@ -1,0 +1,31 @@
+@mixin ul-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin border {
+  border: 1px solid $color-border;
+}
+
+@mixin title($size: 27px, $line: 30px, $weight: 700) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+  color: $color-title;
+}
+
+@mixin text($size: 15px, $line: 24px, $weight: 400) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+  color: $color-text;
+}
+
+@mixin subheader($size: 17px, $line: 16px, $weight: 700) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+  text-transform: uppercase;
+  color: $color-secondary;
+}

@@ -1,0 +1,32 @@
+.main-menu {
+  background: #FFFFFF;
+}
+
+.main-menu__list {
+  @include ul-reset;
+}
+
+.main-menu__item {
+  display: none;
+  background: #FFFFFF;
+  border-bottom: 1px solid #ececec;
+  &--logo {
+    display: block;
+  }
+}
+
+.main-menu__logo {
+  display: block;
+  width: 86px;
+  height: 35px;
+  margin: 20px auto;
+}
+
+.main-menu__link {
+  display: block;
+  padding: 28px 50px 28px 75px;
+  @include text(17px, 24px, 700);
+  text-decoration: none;
+}
+
+

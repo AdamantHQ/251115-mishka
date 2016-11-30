@@ -1,0 +1,33 @@
+.page-cart {
+  margin: 0 30px;
+  &--hidden {
+    display: none;
+  }
+}
+
+.page-cart__title {
+  display: block;
+  @include title(25px);
+  margin: 35px 40px 20px 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-cart__subtitle {
+  @include text(15px, 30px);
+  text-align: center;
+}
+
+.cart-form__btn {
+  display: inline-block;
+  margin: 30px 0 45px 0;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  color: $color-contrast;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  background-color: $color-secondary;
+}

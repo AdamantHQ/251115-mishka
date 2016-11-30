@@ -1,0 +1,26 @@
+.category {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category__item {
+  display: block;
+  min-height: 100px;
+}
+
+.category__link {
+  display: block;
+  padding: $edge 50% $edge 30px;
+  text-decoration: none;
+  color: $color-contrast;
+  @include text(19px, 24px, 700);
+  &--interior {
+    background: $color-secondary;
+  }
+  &--toys {
+    background: #56c3b2;
+  }
+}
+
+

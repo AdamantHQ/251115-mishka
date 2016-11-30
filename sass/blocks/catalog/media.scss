@@ -1,0 +1,20 @@
+.media {
+  margin: 30px;
+  @include border;
+}
+
+.media__title {
+  @include title(17px 24px);
+  padding: 25px 40px 25px 80px;
+  margin: 0;
+}
+
+
+.media__description {
+  @include text(13px 24px);
+}
+
+.media__footer {
+  margin: 0 30px;
+}
+

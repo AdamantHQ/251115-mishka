@@ -1,0 +1,46 @@
+.featured {
+  padding: 0 $edge;
+}
+
+.featured__title {
+  margin: 30px 0 10px 0;
+  @include title(25px);
+  padding: 0;
+}
+
+.featured__label {
+  display: block;
+  margin-bottom: 30px;
+  @include subheader;
+}
+
+.featured__description {
+  p {
+    margin: 30px 0;
+    @include text(15px, 24px, 400);
+  }
+}
+
+.featured__table {
+  margin: 30px 0;
+  width: 100%;
+  tr {
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.featured__parameter,
+.featured__parameter-value {
+  padding: 10px 0;
+  @include text(15px, 20px, 400);
+}
+
+.featured__footer {
+
+  p {
+    padding: 25px 25px 0 25px;
+    margin: 0;
+    text-align: center;
+    @include text(17px, 24px, 700);
+  }
+}
