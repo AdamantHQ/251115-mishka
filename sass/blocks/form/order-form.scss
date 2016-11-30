@@ -1,5 +1,20 @@
 .order-form {
   margin: 30px;
+  input {
+    border: none;
+    outline: none;
+    &::-webkit-input-placeholder {
+      @include text(17px, 18px);
+      //check ff
+      opacity: 0.3;
+    }
+  }
+}
+
+.order-form__section {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .order-form__promo-text {
@@ -14,6 +29,29 @@
   @include title(17px, 18px);
 }
 
+.order-form__checkbox,
+.order-form__radio {
+  display: block;
+  min-height: 40px;
+}
+
+.order-form__input-radio,
+.order-form__input-checkbox {
+  display: none;
+}
+
 .order-form__footer {
   @include text(14px, 16px);
+}
+
+.order-form__textarea {
+  border: 2px solid $color-text;
+  outline: none;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  &::-webkit-input-placeholder {
+    @include text(17px, 18px);
+    opacity: 0.3;
+  }
 }

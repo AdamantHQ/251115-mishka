@@ -140,21 +140,23 @@
   <div class="overlay overlay--hidden"></div>
 
   <div class="page-cart page-cart--hidden">
+
     <b class="page-cart__title">Добавить в корзину</b>
     <p class="page-cart__subtitle">Выберите размер:</p>
 
-    <form class="cart-form" action="https://echo.htmlacademy.ru/" method="POST">
-      <div class="cart-form__inner">
-        <input class="cart-form__input" type="radio" name="cart-form__size" id="size-s" checked>
-        <label for="size-s">S</label>
-        <input class="cart-form__input" type="radio" name="cart-form__size" id="size-m">
-        <label for="size-m">M</label>
-        <input class="cart-form__input" type="radio" name="cart-form__size" id="size-l">
-        <label for="size-l">L</label>
+    <form class="page-cart__form" action="https://echo.htmlacademy.ru/" method="POST">
+      <div class="page-cart__form-inner">
+        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-s" checked>
+        <label class="page-cart__radio" for="size-s">S</label>
+        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-m">
+        <label class="page-cart__radio" for="size-m">M</label>
+        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-l">
+        <label class="page-cart__radio" for="size-l">L</label>
       </div>
 
-      <button class="cart-form__btn" type="submit">Добавить</button>
+      <button class="page-cart__btn" type="submit">Добавить</button>
     </form>
+
   </div>
 
 </body>

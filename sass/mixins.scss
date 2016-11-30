@@ -8,24 +8,33 @@
   border: 1px solid $color-border;
 }
 
-@mixin title($size: 27px, $line: 30px, $weight: 700) {
-  font-size: $size;
-  line-height: $line;
-  font-weight: $weight;
-  color: $color-title;
-}
-
-@mixin text($size: 15px, $line: 24px, $weight: 400) {
-  font-size: $size;
-  line-height: $line;
-  font-weight: $weight;
-  color: $color-text;
-}
-
-@mixin subheader($size: 17px, $line: 16px, $weight: 700) {
-  font-size: $size;
-  line-height: $line;
-  font-weight: $weight;
+@mixin btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
-  color: $color-secondary;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 18px;
+}
+
+@mixin font-props($size, $line, $weight, $color) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin title($size: 27px, $line: 30px, $weight: 700, $color: $color-title) {
+  @include font-props($size, $line, $weight, $color);
+}
+
+@mixin text($size: 15px, $line: 24px, $weight: 400, $color: $color-text) {
+  @include font-props($size, $line, $weight, $color);
+}
+
+@mixin subheader($size: 17px, $line: 16px, $weight: 700, $color: $color-secondary) {
+  @include font-props($size, $line, $weight, $color);
+  text-transform: uppercase;
 }

@@ -1,6 +1,5 @@
 .about {
-  margin: 30px 0;
-  padding: 0 30px;
+  margin: 30px;
 }
 
 .about__title {
@@ -13,7 +12,7 @@
 }
 
 .about__list-item {
-  @include title(17px, normal, 700);
+  @include title(17px, 20px, 700);
   margin: 0;
-  padding: 80px 0 0 0;
+  padding: 84px 0 0 0;
 }

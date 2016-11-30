@@ -3,29 +3,41 @@
 
 @import "normalize.scss";
 
-/*global styles*/
+
+/***global styles***/
+
 @import "global/base.scss";
 @import "global/fonts.scss";
 
 
-/*common blocks for several pages*/
+/***common blocks for several pages***/
 
 /*header*/
 @import "blocks/common/main-menu.scss";
 @import "blocks/common/intro.scss";
 
-@import "blocks/common/social.scss";
+/*footer*/
 @import "blocks/common/page-footer.scss";
+@import "blocks/common/social.scss";
 @import "blocks/common/copyright.scss";
+
+/*general*/
 @import "blocks/common/btn.scss";
+
+/*modal*/
 @import "blocks/common/overlay.scss";
 @import "blocks/common/page-cart.scss";
 
+
+/***Page blocks***/
+
+/*index*/
 @import "blocks/index/about.scss";
 @import "blocks/index/category.scss";
 @import "blocks/index/contacts.scss";
 @import "blocks/index/featured.scss";
 @import "blocks/index/reviews.scss";
+
 
 @import "blocks/form/order-form.scss";
 

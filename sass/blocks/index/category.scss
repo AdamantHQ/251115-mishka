@@ -1,20 +1,17 @@
 .category {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @include ul-reset;
 }
 
 .category__item {
-  display: block;
-  min-height: 100px;
+  min-height: 103px;
 }
 
 .category__link {
   display: block;
-  padding: $edge 50% $edge 30px;
   text-decoration: none;
-  color: $color-contrast;
-  @include text(19px, 24px, 700);
+  padding: 27.5px 50% 27.5px 30px;
+  @include text(19px, 24px, 700, $color-contrast);
+
   &--interior {
     background: $color-secondary;
   }

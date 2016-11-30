@@ -10,10 +10,16 @@
   margin: 30px 0;
 }
 
-.contacts__map {
-  margin-left: -30px;
+.contacts__item {
+  @include text(15px, 30px);
 }
 
-.contacts__btn {
+.contacts__link {
+  border-bottom: 1px solid $color-secondary;
+}
 
+.contacts__map {
+  //temporarily
+  margin-left: -30px;
+  margin-bottom: 40px;
 }

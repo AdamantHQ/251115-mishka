@@ -1,17 +1,8 @@
 .btn {
-  display: inline-block;
-  padding: 17px;
-  margin: 30px 0;
-  width: 100%;
-  box-sizing: border-box;
-  cursor: pointer;
-  vertical-align: middle;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
+  @include btn;
+  @include subheader(17px, 16px, 700);
   color: $color-text;
-  outline: none;
   background: transparent;
   border: 2px solid $color-text;
-  @include text(17px, 16px, 700);
+
 }
