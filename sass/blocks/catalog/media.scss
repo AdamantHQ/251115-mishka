@@ -3,17 +3,50 @@
   @include border;
 }
 
+.media__content {
+  display: flex;
+  flex-direction: column;
+}
+
 .media__title {
   @include title(17px, 24px);
   padding: 25px 40px 25px 80px;
   margin: 0;
 }
 
+.media__video {
+  img {
+    width: 100%;
+  }
+}
 
 .media__description {
   @include text(13px, 24px);
 }
 
 .media__footer {
-  margin: 0 30px;
+  margin: 30px;
+}
+
+@media #{$tablet} {
+  .media__description {
+    @include text(15px, 30px);
+  }
+
+  .media__header {
+    order: 2;
+    @include bg-center(icon-video, 32px, 32px);
+    &::before {
+      left: 50px;
+    }
+  }
+
+  .media__footer {
+    order: 3;
+    margin-top: 0;
+  }
+
+  .media__btn {
+    width: 100%;
+  }
 }

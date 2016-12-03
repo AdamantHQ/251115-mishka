@@ -9,10 +9,74 @@
 
 .about__list {
   @include ul-reset;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__list-item {
   @include title(17px, 20px, 700);
   margin: 0;
   padding: 84px 0 0 0;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30px;
+  }
+  &--eco::before {
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-feature-1.svg");
+  }
+  &--price::before {
+    width: 47px;
+    height: 27px;
+    background-image: url("../img/icon-feature-3.svg");
+
+  }
+  &--like::before {
+    width: 33px;
+    height: 28px;
+    background-image: url("../img/icon-feature-5.svg");
+
+  }
+  &--handmade::before {
+    width: 34px;
+    height: 34px;
+    background-image: url("../img/icon-feature-2.svg");
+
+  }
+  &--native::before {
+    width: 54px;
+    height: 23px;
+    background-image: url("../img/icon-feature-4.svg");
+
+  }
+  &--gift::before {
+    width: 33px;
+    height: 32px;
+    background-image: url("../img/icon-feature-6.svg");
+  }
+}
+
+@media #{$tablet} {
+  .about {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .about__title {
+    @include title-tablet
+  }
+
+  .about__list {
+    flex-wrap: wrap;
+    max-height: 450px;
+  }
+
+  .about__list-item {
+    width: 49%;
+    min-height: 65px;
+  }
 }

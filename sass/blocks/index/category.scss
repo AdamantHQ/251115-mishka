@@ -1,5 +1,7 @@
 .category {
   @include ul-reset;
+  display: flex;
+  flex-direction: column;
 }
 
 .category__item {
@@ -9,13 +11,46 @@
 .category__link {
   display: block;
   text-decoration: none;
-  padding: 27.5px 50% 27.5px 30px;
+  padding: 27.5px 0 27.5px 30px;
   @include text(19px, 24px, 700, $color-contrast);
-
   &--interior {
     background: $color-secondary;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 35px;
+      top: 50%;
+      margin-top: -31px;
+      width: 40px;
+      height: 62px;
+      background: url("../img/icon-interior.svg");
+    }
   }
   &--toys {
     background: #56c3b2;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 35px;
+      top: 50%;
+      margin-top: -30px;
+      width: 60px;
+      height: 60px;
+      background: url("../img/icon-toy.svg");
+    }
+  }
+}
+
+@media #{$tablet} {
+  .category {
+    margin: 0 50px;
+    flex-direction: row;
+    margin-top: -102px;
+  }
+
+  .category__item {
+    width: 50%;
   }
 }

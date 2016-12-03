@@ -8,6 +8,21 @@
   border: 1px solid $color-border;
 }
 
+@mixin bg-center($filename, $width, $height) {
+  position: relative;
+  &::before {
+    content: "";
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../img/#{$filename}.svg") no-repeat;
+  }
+
+}
+
 @mixin btn {
   display: inline-block;
   text-align: center;
@@ -17,6 +32,9 @@
   cursor: pointer;
   box-sizing: border-box;
   padding: 18px;
+  @media #{$tablet} {
+    width: auto;
+  }
 }
 
 @mixin font-props($size, $line, $weight, $color) {
@@ -30,6 +48,10 @@
   @include font-props($size, $line, $weight, $color);
 }
 
+@mixin title-tablet {
+  @include title(43px, 50px);
+}
+
 @mixin text($size: 15px, $line: 24px, $weight: 400, $color: $color-text) {
   @include font-props($size, $line, $weight, $color);
 }
@@ -37,4 +59,18 @@
 @mixin subheader($size: 17px, $line: 16px, $weight: 700, $color: $color-secondary) {
   @include font-props($size, $line, $weight, $color);
   text-transform: uppercase;
+}
+
+@mixin margins {
+  margin-right: 30px;
+  margin-left: 30px;
+  @media #{$tablet} {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+
+@mixin padding-clear {
+  padding-left: 0;
+  padding-right: 0;
 }

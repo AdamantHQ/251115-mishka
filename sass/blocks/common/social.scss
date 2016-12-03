@@ -2,10 +2,27 @@
   width: 100%;
   min-height: 80px;
   margin: 0;
+
   border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .social__btn {
+  position: relative;
   font-size: 0;
+  width: 30px;
+  height: 30px;
 
+
+  &--instagram {
+    @include bg-center(icon-insta, 22px, 21px);
+  }
+  &--facebook {
+    @include bg-center(icon-fb, 15px, 28px);
+  }
+  &--twitter {
+    @include bg-center(icon-twitter, 23px, 20px);
+  }
 }

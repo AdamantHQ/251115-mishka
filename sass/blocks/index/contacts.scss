@@ -1,6 +1,7 @@
 .contacts {
-  margin: 30px;
+  @include margins;
 }
+
 
 .contacts__title {
   @include title(18px, 30px);
@@ -22,4 +23,14 @@
   //temporarily
   margin-left: -30px;
   margin-bottom: 40px;
+}
+
+@media #{$tablet} {
+  .contacts__title {
+    @include title-tablet;
+  }
+
+  .contact__btn {
+    align-self: center;
+  }
 }

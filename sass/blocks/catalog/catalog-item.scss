@@ -1,10 +1,15 @@
 .catalog-item {
   margin: 30px;
   @include border;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog-item__description {
-  margin: 30px;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px;
 }
 
 .catalog-item__description-header {
@@ -12,7 +17,9 @@
 }
 
 .catalog-item__description-footer {
-  margin: 30px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .catalog-item__title {
@@ -28,4 +35,11 @@
 
 .catalog-item__price {
   @include title(15px, 24px);
+}
+
+@media #{$tablet} {
+  .catalog-item {
+    flex-direction: row;
+  }
+
 }

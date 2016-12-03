@@ -2,9 +2,16 @@
   @include title(19px, 18px);
   padding: 30px;
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .copyright__link {
   font-size: 0;
+
+  width: 27px;
+  height: 34px;
+  position: relative;
+  @include bg-center(logo-htmlacademy, 27px, 34px);
 }
