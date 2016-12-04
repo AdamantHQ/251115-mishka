@@ -3,8 +3,7 @@
 }
 
 .page-footer__wrapper {
-  width: 260px;
-  margin: 0 auto;
+  @include centrify-all;
   display: flex;
   flex-direction: column;
 }
@@ -13,22 +12,24 @@
   display: none;
 }
 
+.page-footer__social {
+  min-height: 80px;
+}
+
 @media #{$tablet} {
   .page-footer__wrapper {
-    width: 688px;
     align-items: center;
-    justify-content: space-between;
     flex-direction: row;
+    > * {
+      flex-basis: 33%;
+    }
   }
 
   .page-footer__logo {
     display: block;
-    flex-basis: 33%;
   }
-}
 
-@media #{$desktop} {
-  .page-footer__wrapper {
-    width: 1050px;
+  .page-footer__social {
+    min-height: 143px;
   }
 }

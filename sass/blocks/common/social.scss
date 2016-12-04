@@ -1,7 +1,5 @@
 .social {
-  min-height: 80px;
   margin: 0;
-
   border-bottom: 1px solid #e5e5e5;
   display: flex;
   justify-content: center;
@@ -18,18 +16,19 @@
     margin-right: 0;
   }
   &--instagram {
-    @include bg-center(icon-insta, 22px, 21px);
+    &::before {
+      @include bg-image(icon-insta, 22px, 21px);
+    }
   }
   &--facebook {
-    @include bg-center(icon-fb, 15px, 28px);
+    &::before {
+      @include bg-image(icon-fb, 15px, 28px);
+    }
   }
   &--twitter {
-    @include bg-center(icon-twitter, 23px, 20px);
-  }
-}
+    &::before {
+      @include bg-image(icon-twitter, 23px, 20px);
+    }
 
-@media #{$tablet} {
-  .social {
-    flex-basis: 33%;
   }
 }

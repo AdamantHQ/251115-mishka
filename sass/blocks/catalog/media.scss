@@ -1,6 +1,6 @@
 .media {
   margin: 30px;
-  @include border;
+  @include border(full);
 }
 
 .media__content {
@@ -35,8 +35,9 @@
 
   .media__header {
     order: 2;
-    @include bg-center(icon-video, 32px, 32px);
+    position: relative;
     &::before {
+      @include bg-image(icon-video, 32px, 32px);
       left: 50px;
     }
   }

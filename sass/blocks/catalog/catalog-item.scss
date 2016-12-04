@@ -1,6 +1,6 @@
 .catalog-item {
   margin: 30px;
-  @include border;
+  @include border(full);
   display: flex;
   flex-direction: column;
 }

@@ -4,23 +4,25 @@
   padding: 0;
 }
 
-@mixin border {
-  border: 1px solid $color-border;
+@mixin a-reset {
+  display: block;
+  text-decoration: none;
 }
 
-@mixin bg-center($filename, $width, $height) {
-  position: relative;
-  &::before {
-    content: "";
-    width: $width;
-    height: $height;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: url("../img/#{$filename}.svg") no-repeat;
+@mixin border($side, $width: 1px, $color: $color-border) {
+  @if $side == full {
+    border: $width solid $color;
+  } @else  {
+    border-#{$side}: $width solid $color;
   }
+}
 
+@mixin bg-image($filename, $width, $height) {
+  content: "";
+  width: $width;
+  height: $height;
+  position: absolute;
+  background: url("../img/#{$filename}.svg") no-repeat;
 }
 
 @mixin btn {
@@ -62,12 +64,14 @@
   text-transform: uppercase;
 }
 
-@mixin margins {
-  margin-right: 30px;
-  margin-left: 30px;
+@mixin centrify-all {
+  margin: 0 auto;
+  width: 260px;
   @media #{$tablet} {
-    margin-right: 50px;
-    margin-left: 50px;
+    width: 668px;
+  }
+  @media #{$desktop} {
+    width: 1050px;
   }
 }
 

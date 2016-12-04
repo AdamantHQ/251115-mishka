@@ -2,15 +2,17 @@
   margin: 0;
 }
 
-//TODO: pseudo
 .main-menu__btn {
   position: absolute;
   top: 30px;
   right: 30px;
-  display: block;
   width: 21px;
   height: 21px;
-  background: url("../img/icon-menu-close.svg") no-repeat;
+  cursor: pointer;
+  &::before {
+    @include bg-image(icon-menu-close, 21px, 21px);
+  }
+
 }
 
 .main-menu__list {
@@ -20,32 +22,42 @@
 }
 
 .main-menu__item {
-  padding: 28px 28px 28px 75px;
-  border-bottom: 1px solid $color-border;
+  padding-left: 75px;
+  @include border(bottom);
   &--logo {
-    padding: 22.5px 28px;
+    padding: 22.5px 0;
     text-align: center;
   }
-
   &--search {
-    background: url("../img/icon-search.svg") 32px 50% no-repeat;
+    &::before {
+      @include bg-image(icon-search, 18px, 18px);
+    }
   }
   &--cart {
-    background: url("../img/icon-cart.svg") 32px 50% no-repeat;
+    &::before {
+      @include bg-image(icon-cart, 19px, 21px);
+    }
   }
-  &--promo,
-  &--delivery,
-  &--catalog,
-  &--form,
   &--search,
   &--cart {
+    position: relative;
+    &::before {
+      left: 30px;
+      top: 30px;
+    }
+  }
+
+  &--promo,
+  &--delivery {
     display: none;
   }
 }
 
 .main-menu__link {
-  @include title(17px, 24px);
+  display: block;
   text-decoration: none;
+  padding: 28px 0;
+  @include title(17px, 24px);
 }
 
 
@@ -54,8 +66,6 @@
     position: absolute;
     top: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   .main-menu__btn {
@@ -64,6 +74,7 @@
 
   .main-menu__list {
     width: 668px;
+    margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
@@ -73,25 +84,41 @@
     border: none;
 
     &--logo {
+      padding: 23.5px 0;
       order: 0;
-      width: 320px;
-      @include padding-clear;
+      flex-grow: 1;
+      flex-basis: 320px;
       text-align: left;
     }
 
     &--catalog,
     &--form {
+      .main-menu__link {
+        padding: 22px 0;
+        font-size: 15px;
+      }
       @include padding-clear;
-      width: 160px;
+      margin-right: 35px;
       order: 2;
+    }
+
+    &--search,
+    &--cart {
+      .main-menu__link {
+        padding: 32px 0;
+      }
+      order: 1;
+      &::before {
+        left: 34px;
+        top: 36px;
+      }
     }
 
     &--search {
       padding: 0;
-      width: 80px;
-      order: 1;
-      border-left: 1px solid $color-border;
-      border-right: 1px solid $color-border;
+      flex-basis: 81px;
+      @include border(left);
+      @include border(right);
       .main-menu__link {
         font-size: 0;
       }
@@ -99,24 +126,17 @@
 
     &--cart {
       padding-right: 0;
-      width: 190px;
-      order: 1;
+      padding-left: 85px;
       text-align: right;
     }
 
     &--delivery {
-      @include padding-clear;
       flex-grow: 1;
       display: block;
+      padding: 22px 0;
       @include text;
       text-align: right;
       order: 5;
-    }
-  }
-
-  .main-menu__link {
-    &--search {
-      font-size: 0;
     }
   }
 }
@@ -129,22 +149,31 @@
 
   .main-menu__item {
     &--logo {
+      flex-basis: 86px;
       order: 1;
-      flex-basis: 250px;
     }
-    &--catalog {
-      width: 186px;
+    &--catalog,
+    &--form {
       order: 0;
+      .main-menu__link {
+        padding: 28px 0;
+        @include title(17px, 24px);
+      }
+    }
+
+    &--catalog {
+      flex-basis: 185px;
+      @include border(right);
     }
     &--form {
-      width: 265px;
-      order: 0;
+      flex-basis: 265px;
+      margin-right: 0;
     }
     &--promo {
       display: block;
       order: 2;
       @include padding-clear;
-      width: 186px;
+      margin-right: 75px;
       .main-menu__link {
         @include title(15px, 24px);
       }

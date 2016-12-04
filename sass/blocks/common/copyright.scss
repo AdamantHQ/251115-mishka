@@ -1,6 +1,5 @@
 .copyright {
   @include title(19px, 18px);
-
   padding: 30px;
   margin: 0;
   display: flex;
@@ -14,14 +13,15 @@
   width: 27px;
   height: 34px;
   position: relative;
-  @include bg-center(logo-htmlacademy, 27px, 34px);
+  &::before {
+    @include bg-image(logo-htmlacademy, 27px, 34px);
+  }
 }
 
 @media #{$tablet} {
   .copyright {
-    padding: 0;
-    flex-basis: 33%;
     justify-content: flex-end;
+    padding: 0;
   }
 
   .copyright__link {

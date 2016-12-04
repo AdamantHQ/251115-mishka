@@ -1,10 +1,5 @@
-.about {
-
-}
-
 .about__inner {
-  width: 260px;
-  margin: 30px auto;
+  @include centrify-all;
 }
 
 .about__title {
@@ -21,55 +16,32 @@
 .about__list-item {
   @include title(17px, 20px, 700);
   margin: 0;
-  padding: 84px 0 0 0;
+  padding-top: 84px;
   position: relative;
   &::before {
-    content: "";
-    display: block;
-    position: absolute;
     top: 30px;
   }
   &--eco::before {
-    width: 32px;
-    height: 37px;
-    background-image: url("../img/icon-feature-1.svg");
+    @include bg-image(icon-feature-1, 32px, 37px);
   }
   &--price::before {
-    width: 47px;
-    height: 27px;
-    background-image: url("../img/icon-feature-3.svg");
-
+    @include bg-image(icon-feature-3, 47px, 27px);
   }
   &--like::before {
-    width: 33px;
-    height: 28px;
-    background-image: url("../img/icon-feature-5.svg");
-
+    @include bg-image(icon-feature-5, 32px, 28px);
   }
   &--handmade::before {
-    width: 34px;
-    height: 34px;
-    background-image: url("../img/icon-feature-2.svg");
-
+    @include bg-image(icon-feature-2, 34px, 34px);
   }
   &--native::before {
-    width: 54px;
-    height: 23px;
-    background-image: url("../img/icon-feature-4.svg");
-
+    @include bg-image(icon-feature-4, 54px, 23px);
   }
   &--gift::before {
-    width: 33px;
-    height: 32px;
-    background-image: url("../img/icon-feature-6.svg");
+    @include bg-image(icon-feature-6, 33px, 32px);
   }
 }
 
 @media #{$tablet} {
-  .about__inner {
-    width: 668px;
-  }
-
   .about__title {
     @include title-tablet
   }

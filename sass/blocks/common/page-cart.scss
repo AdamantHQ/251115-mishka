@@ -54,7 +54,7 @@
   padding: 18px;
   width: 82px;
   text-align: center;
-  border: 2px solid $color-border;
+  @include border(full, 2px);
   @include title(17px, 16px);
   cursor: pointer;
 }
