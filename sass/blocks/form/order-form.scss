@@ -1,4 +1,5 @@
 .order-form {
+  @include centrify-all;
 
   margin-top: 30px;
   margin-bottom: 30px;
@@ -93,6 +94,7 @@
   border: 2px solid $color-title;
   outline: none;
   padding: 0;
+  margin-top: 25px;
   box-sizing: border-box;
   width: 100%;
   &::-webkit-input-placeholder {
@@ -104,11 +106,6 @@
 @media #{$tablet} {
   .order-form__promo-text {
     @include text(17px, 30px);
-  }
-
-  .order-form {
-    margin-top: 50px;
-    margin-bottom: 50px;
   }
 
   .order-form__section:nth-child(2n-1) {

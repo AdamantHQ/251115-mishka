@@ -1,9 +1,10 @@
 .media {
-  margin: 30px;
-  @include border(full);
+  margin-top: 30px;
 }
 
 .media__content {
+  @include centrify-all;
+  @include border(full);
   display: flex;
   flex-direction: column;
 }
@@ -11,7 +12,12 @@
 .media__title {
   @include title(17px, 24px);
   padding: 25px 40px 25px 80px;
+  position: relative;
   margin: 0;
+  &::before {
+    @include bg-image(icon-video, 32px, 32px);
+    left: 35px;
+  }
 }
 
 .media__video {
@@ -35,11 +41,6 @@
 
   .media__header {
     order: 2;
-    position: relative;
-    &::before {
-      @include bg-image(icon-video, 32px, 32px);
-      left: 50px;
-    }
   }
 
   .media__footer {
@@ -49,5 +50,36 @@
 
   .media__btn {
     width: 100%;
+  }
+}
+
+@media #{$desktop} {
+  .media__content {
+    padding-left: 760px;
+    -webkit-box-sizing: border-box;
+    position: relative;
+  }
+
+  .media__title {
+    padding-top: 95px;
+    padding-left: 0;
+    &::before {
+      left: 0;
+      top: 40px;
+    }
+  }
+
+  .media__video {
+    position: absolute;
+    left: 0;
+    img {
+      width: 680px;
+    }
+  }
+
+  .media__footer {
+    margin-left: 0;
+    margin-right: 55px;
+    margin-bottom: 50px;
   }
 }
