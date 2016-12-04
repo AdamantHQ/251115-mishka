@@ -1,5 +1,10 @@
 .about {
-  margin: 30px;
+
+}
+
+.about__inner {
+  width: 260px;
+  margin: 30px auto;
 }
 
 .about__title {
@@ -61,9 +66,8 @@
 }
 
 @media #{$tablet} {
-  .about {
-    margin-left: 50px;
-    margin-right: 50px;
+  .about__inner {
+    width: 668px;
   }
 
   .about__title {
@@ -78,5 +82,11 @@
   .about__list-item {
     width: 49%;
     min-height: 65px;
+  }
+}
+
+@media #{$desktop} {
+  .about__inner {
+    width: 700px;
   }
 }

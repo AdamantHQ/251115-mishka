@@ -167,16 +167,24 @@
 
   <footer class="page-footer">
 
-    <p class="social">
-      <a class="social__btn social__btn--instagram" href="#">Мы в Инстаграме</a>
-      <a class="social__btn social__btn--facebook" href="#">Мы в Фейсбуке</a>
-      <a class="social__btn social__btn--twitter" href="#">Мы в Твиттере</a>
-    </p>
+    <div class="page-footer__wrapper">
 
-    <p class="copyright">
-      Разработано
-      <a class="copyright__link" href="#">HTML Academy</a>
-    </p>
+      <a class="page-footer__logo">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+      </a>
+
+      <p class="social">
+        <a class="social__btn social__btn--instagram" href="#">Мы в Инстаграме</a>
+        <a class="social__btn social__btn--facebook" href="#">Мы в Фейсбуке</a>
+        <a class="social__btn social__btn--twitter" href="#">Мы в Твиттере</a>
+      </p>
+
+      <p class="copyright">
+        Разработано
+        <a class="copyright__link" href="#">HTML Academy</a>
+      </p>
+
+    </div>
 
   </footer>
 
@@ -186,21 +194,24 @@
 
   <div class="page-cart page-cart--hidden">
 
-    <b class="page-cart__title">Добавить в корзину</b>
-    <p class="page-cart__subtitle">Выберите размер:</p>
+    <div class="page-cart__inner">
 
-    <form class="page-cart__form" action="https://echo.htmlacademy.ru/" method="POST">
-      <div class="page-cart__form-inner">
-        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-s" checked>
-        <label class="page-cart__radio" for="size-s">S</label>
-        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-m">
-        <label class="page-cart__radio" for="size-m">M</label>
-        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-l">
-        <label class="page-cart__radio" for="size-l">L</label>
-      </div>
+      <b class="page-cart__title">Добавить в корзину</b>
+      <p class="page-cart__subtitle">Выберите размер:</p>
 
-      <button class="page-cart__btn" type="submit">Добавить</button>
-    </form>
+      <form class="page-cart__form" action="https://echo.htmlacademy.ru/" method="POST">
+        <div class="page-cart__form-inner">
+          <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-s" checked>
+          <label class="page-cart__radio" for="size-s">S</label>
+          <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-m">
+          <label class="page-cart__radio" for="size-m">M</label>
+          <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-l">
+          <label class="page-cart__radio" for="size-l">L</label>
+        </div>
+
+        <button class="page-cart__btn" type="submit">Добавить</button>
+      </form>
+    </div>
 
   </div>
 

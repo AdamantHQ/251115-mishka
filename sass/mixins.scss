@@ -32,9 +32,6 @@
   cursor: pointer;
   box-sizing: border-box;
   padding: 18px;
-  @media #{$tablet} {
-    width: auto;
-  }
 }
 
 @mixin font-props($size, $line, $weight, $color) {
@@ -50,6 +47,10 @@
 
 @mixin title-tablet {
   @include title(43px, 50px);
+}
+
+@mixin title-desktop {
+  @include title(53px, 57px);
 }
 
 @mixin text($size: 15px, $line: 24px, $weight: 400, $color: $color-text) {

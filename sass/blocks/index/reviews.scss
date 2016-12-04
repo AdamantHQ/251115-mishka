@@ -1,10 +1,12 @@
 .reviews {
-  @include margins;
-  position: relative;
+
 
 }
 
 .reviews__inner {
+  position: relative;
+  width: 260px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -73,6 +75,10 @@
 @media #{$tablet} {
 
   .reviews__inner {
+    width: 668px;
+  }
+
+  .reviews__inner {
     flex-wrap: wrap;
     flex-direction: row;
   }
@@ -93,7 +99,7 @@
 
   .reviews__footer {
     display: block;
-    width: 50%;
+    width: 334px;
   }
 
   .reviews__controls {
@@ -105,5 +111,12 @@
   .reviews__control {
     border: none;
     width: 100px;
+  }
+}
+
+@media #{$desktop} {
+  .reviews__inner {
+    width: 875px;
+    padding-left: 175px;
   }
 }

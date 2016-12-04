@@ -26,6 +26,7 @@
     padding: 22.5px 28px;
     text-align: center;
   }
+
   &--search {
     background: url("../img/icon-search.svg") 32px 50% no-repeat;
   }
@@ -33,7 +34,11 @@
     background: url("../img/icon-cart.svg") 32px 50% no-repeat;
   }
   &--promo,
-  &--delivery {
+  &--delivery,
+  &--catalog,
+  &--form,
+  &--search,
+  &--cart {
     display: none;
   }
 }

@@ -1,4 +1,34 @@
 .page-footer {
-  padding: 0 30px;
   background-color: $color-bg;
+}
+
+.page-footer__wrapper {
+  width: 260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media #{$tablet} {
+  .page-footer__wrapper {
+    width: 688px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .page-footer__logo {
+    display: block;
+    flex-basis: 33%;
+  }
+}
+
+@media #{$desktop} {
+  .page-footer__wrapper {
+    width: 1050px;
+  }
 }

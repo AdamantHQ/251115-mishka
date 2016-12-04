@@ -45,12 +45,25 @@
 
 @media #{$tablet} {
   .category {
-    margin: 0 50px;
+    margin: 0 auto;
+    max-width: 668px;
     flex-direction: row;
-    margin-top: -102px;
+    margin-top: -110px;
   }
 
   .category__item {
     width: 50%;
   }
+
+  .category__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
+
+@media #{$desktop} {
+  .category {
+    max-width: 1050px;
+  }
+}
+

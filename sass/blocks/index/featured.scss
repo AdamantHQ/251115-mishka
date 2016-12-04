@@ -43,15 +43,14 @@
 
 .featured__image {
   background-color: $color-bg;
-  img {
-    width: 260px;
-    height: 260px;
-  }
+  width: 260px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .featured__footer {
   p {
-    padding: 25px 25px 0 25px;
+    padding: 25px;
     margin: 0;
     text-align: center;
     @include text(17px, 24px, 700);
@@ -60,7 +59,8 @@
 
 @media #{$tablet} {
   .featured {
-    margin: 50px;
+    width: 668px;
+    margin: 50px auto;
   }
 
   .featured__inner {
@@ -88,7 +88,7 @@
   }
 
   .featured__description {
-    width: 43%;
+    width: 290px;
     p {
       margin-top: 0;
     }
@@ -99,8 +99,9 @@
   }
 
   .featured__image {
-    width: 50%;
+    width: 334px;
     height: auto;
+    margin: 0;
     img {
       width: 100%;
       height: auto;
@@ -108,7 +109,7 @@
   }
 
   .featured__footer {
-    width: 43%;
+    width: 290px;
     position: absolute;
     bottom: 0;
   }
@@ -116,4 +117,42 @@
   .featured__btn {
     width: 100%;
   }
+}
+
+
+@media #{$desktop} {
+  .featured {
+    width: 875px;
+    position: relative;
+    padding-left: 175px;
+  }
+
+
+  .featured__header {
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+  }
+
+  .featured__title {
+    @include title-desktop;
+  }
+
+  .featured__label {
+    position: absolute;
+    left: -150px;
+  }
+
+  .featured__description {
+    margin-top: 150px;
+    p {
+      margin-bottom: 60px;
+    }
+  }
+
+  .featured__image {
+    width: 525px;
+
+  }
+;
 }

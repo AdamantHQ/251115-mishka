@@ -1,7 +1,7 @@
 .intro {
   background-color: $color-bg;
   &--index {
-    background: $color-bg url("../img/hero-mobile@1x.jpg") 50% 0 no-repeat;
+    background: #f9f9f9 url("../img/hero-mobile@1x.jpg") 50% 0 no-repeat;
     min-height: 282px;
   }
 }
@@ -9,7 +9,7 @@
 .intro__title {
   @include title;
   margin: 0 auto;
-  //width: 260px;
+  width: 260px;
   padding: 72px 30px;
   text-align: center;
 }
@@ -20,12 +20,17 @@
     border-top: 1px solid $color-border;
     &--index {
       min-height: 627px;
-      background-size: 100% 100%;
+      background-size: auto 100%;
     }
   }
 
   .intro__title {
     @include title-tablet;
     padding-top: 160px;
+    width: 668px;
   }
+}
+
+@media #{$desktop} {
+
 }
