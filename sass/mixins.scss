@@ -17,6 +17,10 @@
   }
 }
 
+@mixin form-input-border {
+  border-bottom: 2px solid #000000;
+}
+
 @mixin bg-image($filename, $width, $height) {
   content: "";
   width: $width;
