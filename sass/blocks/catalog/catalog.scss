@@ -1,0 +1,11 @@
+.catalog__inner {
+  @include centrify-all;
+  display: flex;
+  flex-direction: column;
+}
+
+@media #{$desktop} {
+  .catalog__inner{
+    flex-direction: row;
+  }
+}

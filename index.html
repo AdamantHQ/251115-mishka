@@ -16,15 +16,20 @@
       <span class="main-menu__btn main-menu__btn--closed"></span>
 
       <ul class="main-menu__list main-menu__list--closed main-menu__list--nojs">
+
         <li class="main-menu__item main-menu__item--logo">
           <a class="main-menu__logo">
             <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
           </a>
         </li>
-        <li class="main-menu__item"><a class="main-menu__link" href="catalog.html">Каталог товаров</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="form.html">Вязание на заказ</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">Поиск по сайту</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">Корзина: пока пуста</a></li>
+        <li class="main-menu__item main-menu__item--catalog"><a class="main-menu__link" href="catalog.html">Каталог товаров</a></li>
+        <li class="main-menu__item main-menu__item--form"><a class="main-menu__link" href="form.html">Вязание на заказ</a></li>
+        <li class="main-menu__item main-menu__item--search"><a class="main-menu__link" href="#">Поиск по сайту</a></li>
+        <li class="main-menu__item main-menu__item--cart"><a class="main-menu__link" href="#">Корзина: пока пуста</a></li>
+        <li class="main-menu__item main-menu__item--promo"><a class="main-menu__link" href="#">Новые поступления</a></li>
+        <li class="main-menu__item main-menu__item--promo"><a class="main-menu__link" href="#">Распродажа</a></li>
+        <li class="main-menu__item main-menu__item--delivery"><span>Бесплатная доставка по России</span></li>
+
       </ul>
     </nav>
 
@@ -39,8 +44,8 @@
   <main class="page-main">
 
     <ul class="category">
-      <li class="category__item"><a class="category__link category__link--interior" href="#">Предметы интерьера</a></li>
-      <li class="category__item"><a class="category__link category__link--toys" href="#">Детские игрушки</a></li>
+      <li class="category__item"><a class="category__link category__link--interior" href="#">Предметы <br>интерьера</a></li>
+      <li class="category__item"><a class="category__link category__link--toys" href="#">Детские <br>игрушки</a></li>
     </ul>
 
 
@@ -58,22 +63,22 @@
 
           <table class="featured__table">
             <tr>
-              <td class="featured__parameter">Цвет</td>
+              <td class="featured__parameter">Цвет:</td>
               <td class="featured__parameter-value">«Тиффани»/серый</td>
             </tr>
             <tr>
-              <td class="featured__parameter">Диаметр</td>
+              <td class="featured__parameter">Диаметр:</td>
               <td class="featured__parameter-value">25 см</td>
             </tr>
             <tr>
-              <td class="featured__parameter">Высота</td>
+              <td class="featured__parameter">Высота:</td>
               <td class="featured__parameter-value">15 см</td>
             </tr>
           </table>
         </div>
 
         <div class="featured__image">
-          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Набор из трёх корзин">
+          <img src="img/triple-set-mobile@1x.jpg" alt="Набор из трёх корзин">
         </div>
 
         <div class="featured__footer">
@@ -112,7 +117,7 @@
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 
             <cite class="reviews__footer">
-              <b class="reviews__author-name">Анастасия Красильникова</b>
+              <b class="reviews__author-name">Анастасия Красильникова</b><br>
               <span class="reviews__author-id">@misssssiskras</span>
             </cite>
           </blockquote>
@@ -162,16 +167,24 @@
 
   <footer class="page-footer">
 
-    <p class="social">
-      <a class="social__btn social__btn--instagram" href="#">Мы в Инстаграме</a>
-      <a class="social__btn social__btn--facebook" href="#">Мы в Фейсбуке</a>
-      <a class="social__btn social__btn__twitter" href="#">Мы в Твиттере</a>
-    </p>
+    <div class="page-footer__wrapper">
 
-    <p class="copyright">
-      Разработано
-      <a class="copyright__link" href="#">HTML Academy</a>
-    </p>
+      <a class="page-footer__logo">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+      </a>
+
+      <p class="page-footer__social social">
+        <a class="social__btn social__btn--instagram" href="#">Мы в Инстаграме</a>
+        <a class="social__btn social__btn--facebook" href="#">Мы в Фейсбуке</a>
+        <a class="social__btn social__btn--twitter" href="#">Мы в Твиттере</a>
+      </p>
+
+      <p class="page-footer__copyright copyright">
+        Разработано
+        <a class="copyright__link" href="#">HTML Academy</a>
+      </p>
+
+    </div>
 
   </footer>
 
@@ -181,21 +194,24 @@
 
   <div class="page-cart page-cart--hidden">
 
-    <b class="page-cart__title">Добавить в корзину</b>
-    <p class="page-cart__subtitle">Выберите размер:</p>
+    <div class="page-cart__inner">
 
-    <form class="page-cart__form" action="https://echo.htmlacademy.ru/" method="POST">
-      <div class="page-cart__form-inner">
-        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-s" checked>
-        <label class="page-cart__radio" for="size-s">S</label>
-        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-m">
-        <label class="page-cart__radio" for="size-m">M</label>
-        <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-l">
-        <label class="page-cart__radio" for="size-l">L</label>
-      </div>
+      <b class="page-cart__title">Добавить в корзину</b>
+      <p class="page-cart__subtitle">Выберите размер:</p>
 
-      <button class="page-cart__btn" type="submit">Добавить</button>
-    </form>
+      <form class="page-cart__form" action="https://echo.htmlacademy.ru/" method="POST">
+        <div class="page-cart__form-inner">
+          <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-s" checked>
+          <label class="page-cart__radio" for="size-s">S</label>
+          <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-m">
+          <label class="page-cart__radio" for="size-m">M</label>
+          <input class="page-cart__input-radio" type="radio" name="cart-form__size" id="size-l">
+          <label class="page-cart__radio" for="size-l">L</label>
+        </div>
+
+        <button class="page-cart__btn" type="submit">Добавить</button>
+      </form>
+    </div>
 
   </div>
 

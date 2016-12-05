@@ -1,8 +1,10 @@
 .order-form {
-  margin: 30px;
+  @include centrify-all;
+  margin-top: 30px;
+  margin-bottom: 30px;
   input {
-    border: none;
     outline: none;
+    background-color: transparent;
     &::-webkit-input-placeholder {
       @include text(17px, 18px);
       //check ff
@@ -17,12 +19,29 @@
   padding: 0;
 }
 
+.order-form__inner {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .order-form__promo-text {
   @include text(13px, 24px);
 }
 
 .order-form__title {
+  margin: 0;
   @include subheader;
+  display: flex;
+  align-items: center;
+  &::after {
+    content: "";
+    flex-grow: 1;
+    width: 100px;
+    height: 1px;
+    background: $color-secondary;
+    margin-left: 25px;
+  }
 }
 
 .order-form__group {
@@ -32,7 +51,8 @@
 .order-form__checkbox,
 .order-form__radio {
   display: block;
-  min-height: 40px;
+  min-height: 60px;
+  padding-left: 60px;
 }
 
 .order-form__input-radio,
@@ -40,18 +60,74 @@
   display: none;
 }
 
+.order-form__text {
+  display: block;
+}
+
+.order-form__input-text {
+  display: block;
+  width: 100%;
+  padding-bottom: 15px;
+  border: none;
+  @include form-input-border;
+}
+
+.order-form__input-tel,
+.order-form__input-email {
+  display: block;
+  width: 100%;
+  padding-bottom: 15px;
+  border: none;
+  @include form-input-border;
+}
+
 .order-form__footer {
   @include text(14px, 16px);
 }
 
+
 .order-form__textarea {
-  border: 2px solid $color-text;
+  @include border(full, 2px, #000);
   outline: none;
   padding: 0;
+  background-color: transparent;
+  margin-top: 25px;
   box-sizing: border-box;
   width: 100%;
   &::-webkit-input-placeholder {
     @include text(17px, 18px);
     opacity: 0.3;
+  }
+}
+
+@media #{$tablet} {
+  .order-form__promo-text {
+    @include text(17px, 30px);
+  }
+
+  .order-form__section:nth-child(2n-1) {
+    background-color: $color-bg;
+  }
+
+  .order-form__inner {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .order-form__title {
+    flex-basis: 25%;
+    &::after {
+      display: none;
+    }
+  }
+
+  .order-form__group {
+    flex-grow: 1;
+  }
+
+  .order-form__text,
+  .order-form__input-text {
+    display: inline;
+    width: auto;
   }
 }

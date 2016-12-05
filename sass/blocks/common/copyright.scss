@@ -2,9 +2,29 @@
   @include title(19px, 18px);
   padding: 30px;
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyright__link {
   font-size: 0;
+  margin-left: 30px;
+  width: 27px;
+  height: 34px;
+  position: relative;
+  &::before {
+    @include bg-image(logo-htmlacademy, 27px, 34px);
+  }
+}
+
+@media #{$tablet} {
+  .copyright {
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .copyright__link {
+    margin-left: 30px;
+  }
 }

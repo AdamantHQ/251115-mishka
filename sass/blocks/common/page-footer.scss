@@ -1,4 +1,35 @@
 .page-footer {
-  padding: 0 30px;
   background-color: $color-bg;
+}
+
+.page-footer__wrapper {
+  @include centrify-all;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+.page-footer__social {
+  min-height: 80px;
+}
+
+@media #{$tablet} {
+  .page-footer__wrapper {
+    align-items: center;
+    flex-direction: row;
+    > * {
+      flex-basis: 33%;
+    }
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__social {
+    min-height: 143px;
+  }
 }

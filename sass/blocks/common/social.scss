@@ -1,11 +1,34 @@
 .social {
-  width: 100%;
-  min-height: 80px;
   margin: 0;
   border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social__btn {
+  position: relative;
   font-size: 0;
+  width: 30px;
+  height: 30px;
+  margin-right: 35px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &--instagram {
+    &::before {
+      @include bg-image(icon-insta, 22px, 21px);
+    }
+  }
+  &--facebook {
+    &::before {
+      @include bg-image(icon-fb, 15px, 28px);
+    }
+  }
+  &--twitter {
+    &::before {
+      @include bg-image(icon-twitter, 23px, 20px);
+    }
 
+  }
 }

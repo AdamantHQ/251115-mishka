@@ -1,5 +1,5 @@
-.about {
-  margin: 30px;
+.about__inner {
+  @include centrify-all;
 }
 
 .about__title {
@@ -9,10 +9,56 @@
 
 .about__list {
   @include ul-reset;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__list-item {
   @include title(17px, 20px, 700);
   margin: 0;
-  padding: 84px 0 0 0;
+  padding-top: 84px;
+  position: relative;
+  &::before {
+    top: 30px;
+  }
+  &--eco::before {
+    @include bg-image(icon-feature-1, 32px, 37px);
+  }
+  &--price::before {
+    @include bg-image(icon-feature-3, 47px, 27px);
+  }
+  &--like::before {
+    @include bg-image(icon-feature-5, 32px, 28px);
+  }
+  &--handmade::before {
+    @include bg-image(icon-feature-2, 34px, 34px);
+  }
+  &--native::before {
+    @include bg-image(icon-feature-4, 54px, 23px);
+  }
+  &--gift::before {
+    @include bg-image(icon-feature-6, 33px, 32px);
+  }
+}
+
+@media #{$tablet} {
+  .about__title {
+    @include title-tablet
+  }
+
+  .about__list {
+    flex-wrap: wrap;
+    max-height: 450px;
+  }
+
+  .about__list-item {
+    width: 49%;
+    min-height: 65px;
+  }
+}
+
+@media #{$desktop} {
+  .about__inner {
+    width: 700px;
+  }
 }

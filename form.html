@@ -16,17 +16,24 @@
       <span class="main-menu__btn main-menu__btn--closed"></span>
 
       <ul class="main-menu__list main-menu__list--closed main-menu__list--nojs">
+
         <li class="main-menu__item main-menu__item--logo">
           <a class="main-menu__logo" href="index.html">
             <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
           </a>
         </li>
-        <li class="main-menu__item"><a class="main-menu__link" href="catalog.html">Каталог товаров</a></li>
-        <li class="main-menu__item"><a class="main-menu__link main-menu__link--active">Вязание на заказ</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">Поиск по сайту</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">Корзина: пока пуста</a></li>
+        <li class="main-menu__item main-menu__item--catalog"><a class="main-menu__link" href="catalog.html">Каталог товаров</a></li>
+        <li class="main-menu__item main-menu__item--form"><a class="main-menu__link main-menu__link--active">Вязание на заказ</a></li>
+        <li class="main-menu__item main-menu__item--search"><a class="main-menu__link" href="#">Поиск по сайту</a></li>
+        <li class="main-menu__item main-menu__item--cart"><a class="main-menu__link" href="#">Корзина: пока пуста</a></li>
+        <li class="main-menu__item main-menu__item--promo"><a class="main-menu__link" href="#">Новые поступления</a></li>
+        <li class="main-menu__item main-menu__item--promo"><a class="main-menu__link" href="#">Распродажа</a></li>
+        <li class="main-menu__item main-menu__item--delivery"><span>Бесплатная доставка по России</span></li>
+
       </ul>
     </nav>
+
+
 
     <div class="intro">
       <h1 class="intro__title">Вязание на заказ</h1>
@@ -47,7 +54,7 @@
 
       <fieldset class="order-form__section">
         <div class="order-form__inner">
-          <legend class="order-form__title">Тип</legend>
+          <h2 class="order-form__title">Тип</h2>
 
           <div class="order-form__group">
             <input class="order-form__input-radio" type="radio" name="type" id="type-1">
@@ -62,7 +69,7 @@
 
       <fieldset class="order-form__section">
         <div class="order-form__inner">
-          <legend class="order-form__title">Цвет</legend>
+          <h2 class="order-form__title">Цвет</h2>
 
           <div class="order-form__group">
             <input class="order-form__input-checkbox" id="checkbox1" type="checkbox" name="color-white" checked>
@@ -85,7 +92,7 @@
 
       <fieldset class="order-form__section">
         <div class="order-form__inner">
-          <legend class="order-form__title">ФИО</legend>
+          <h2 class="order-form__title">ФИО</h2>
 
           <div class="order-form__group">
             <label class="order-form__text" for="firstname">Имя:</label>
@@ -102,14 +109,14 @@
 
       <fieldset class="order-form__section">
         <div class="order-form__inner">
-          <legend class="order-form__title">Тел</legend>
+          <h2 class="order-form__title">Тел</h2>
           <div class="order-form__group">
             <input class="order-form__input-tel" type="tel" name="phone" placeholder="+7 XXX XX XX*" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" required>
           </div>
         </div>
 
         <div class="order-form__inner">
-          <legend class="order-form__title">E-mail</legend>
+          <h2 class="order-form__title">E-mail</h2>
           <div class="order-form__group">
             <input class="order-form__input-email" type="email" name="email" placeholder="Ваш Email*" required>
           </div>
@@ -120,7 +127,7 @@
 
       <fieldset class="order-form__section">
         <div class="order-form__inner">
-          <legend class="order-form__title">Доп</legend>
+          <h2 class="order-form__title">Доп</h2>
           <div class="order-form__group">
             <textarea class="order-form__textarea" name="extra" cols="24" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
@@ -139,16 +146,26 @@
 
 
   <footer class="page-footer">
-    <p class="social">
-      <a class="social__btn social__btn--instagram" href="#">Мы в Инстаграме</a>
-      <a class="social__btn social__btn--facebook" href="#">Мы в Фейсбуке</a>
-      <a class="social__btn social__btn__twitter" href="#">Мы в Твиттере</a>
-    </p>
 
-    <p class="copyright">
-      Разработано
-      <a class="copyright__link" href="#">HTML Academy</a>
-    </p>
+    <div class="page-footer__wrapper">
+
+      <a class="page-footer__logo">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+      </a>
+
+      <p class="page-footer__social social">
+        <a class="social__btn social__btn--instagram" href="#">Мы в Инстаграме</a>
+        <a class="social__btn social__btn--facebook" href="#">Мы в Фейсбуке</a>
+        <a class="social__btn social__btn--twitter" href="#">Мы в Твиттере</a>
+      </p>
+
+      <p class="page-footer__copyright copyright">
+        Разработано
+        <a class="copyright__link" href="#">HTML Academy</a>
+      </p>
+
+    </div>
+
   </footer>
 
 

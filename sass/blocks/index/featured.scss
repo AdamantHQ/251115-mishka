@@ -2,6 +2,11 @@
   margin: 30px;
 }
 
+.featured__inner {
+  @include centrify-all;
+  width: 100%;
+}
+
 .featured__header {
   margin-bottom: 30px;
 }
@@ -18,7 +23,7 @@
 .featured__description {
   p {
     margin: 30px 0 20px 0;
-    @include text(15px, 24px, 400);
+    @include text;
   }
 }
 
@@ -26,13 +31,13 @@
   margin: 20px 0 28px 0;
   width: 100%;
   tr {
-    border-bottom: 1px solid #ececec;
+    @include border(bottom);
   }
 }
 
 .featured__table {
   td {
-    @include text(15px, 20px, 400);
+    @include text(15px, 20px);
     padding: 10px 0;
   }
 }
@@ -43,17 +48,111 @@
 
 .featured__image {
   background-color: $color-bg;
-  img {
-    width: 260px;
-    height: 260px;
-  }
+  width: 260px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .featured__footer {
   p {
-    padding: 25px 25px 0 25px;
+    padding: 25px;
     margin: 0;
     text-align: center;
     @include text(17px, 24px, 700);
+  }
+}
+
+@media #{$tablet} {
+  .featured__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .featured__header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .featured__title {
+    @include title-tablet;
+  }
+
+  .featured__label {
+    max-width: 120px;
+    text-align: center;
+  }
+
+  .featured__description {
+    width: 290px;
+    p {
+      margin-top: 0;
+    }
+  }
+
+  .featured__table {
+    padding-right: 50px;
+  }
+
+  .featured__image {
+    width: 334px;
+    height: auto;
+    margin: 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .featured__footer {
+    width: 290px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .featured__btn {
+    width: 100%;
+  }
+}
+
+
+@media #{$desktop} {
+  .featured {
+    padding-left: 175px;
+  }
+
+  .featured__inner {
+    width: 875px;
+    position: relative;
+  }
+
+  .featured__header {
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+  }
+
+  .featured__title {
+    @include title-desktop;
+  }
+
+  .featured__label {
+    position: absolute;
+    left: -150px;
+  }
+
+  .featured__description {
+    margin-top: 150px;
+    p {
+      margin-bottom: 60px;
+    }
+  }
+
+  .featured__image {
+    width: 525px;
   }
 }
