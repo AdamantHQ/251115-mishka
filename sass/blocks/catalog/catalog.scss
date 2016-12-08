@@ -4,7 +4,19 @@
   flex-direction: column;
 }
 
+@media #{$tablet} {
+  .catalog {
+    padding-top: 27px;
+    margin-bottom: 53px;
+  }
+}
+
 @media #{$desktop} {
+  .catalog {
+    padding-top: 130px;
+    margin-bottom: 57px;
+  }
+
   .catalog__inner{
     flex-direction: row;
   }

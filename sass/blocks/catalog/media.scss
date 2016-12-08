@@ -1,5 +1,6 @@
 .media {
   margin-top: 30px;
+  margin-bottom: 58px;
 }
 
 .media__content {
@@ -11,57 +12,113 @@
 
 .media__title {
   @include title(17px, 24px);
-  padding: 25px 40px 25px 80px;
+  padding: 23px 40px 25px 90px;
   position: relative;
   margin: 0;
   &::before {
     @include bg-image(icon-video, 32px, 32px);
-    left: 35px;
+    left: 33px;
+    top: 30px;
   }
 }
 
 .media__video {
+  width: 260px;
+  height: 150px;
   img {
     width: 100%;
+    height: 100%;
   }
 }
 
 .media__description {
+  margin-top: 0;
+  margin-bottom: 26px;
+  padding-right: 5px;
   @include text(13px, 24px);
 }
 
 .media__footer {
-  margin: 30px;
+  width: 192px;
+  margin: 27px auto 32px;
 }
 
 .media__btn {
   @include btn;
+  width: 188px;
+  font-size: 17px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media #{$tablet} {
+  .media {
+    margin-bottom: 64px;
+  }
+
+
   .media__description {
     @include text(15px, 30px);
   }
 
   .media__header {
     order: 2;
+    width: 584px;
+    margin: 38px auto 33px;
+  }
+
+  .media__title {
+    font-size: 20px;
+    padding: 0 0 0 64px;
+    &::before {
+      left: 0;
+      top: -6px;
+    }
+  }
+
+  .media__video {
+    width: 668px;
+    height: 455px;
+    img {
+      width: 668px;
+      height: 455px;
+    }
   }
 
   .media__footer {
+    width: 584px;
     order: 3;
     margin-top: 0;
+    margin-bottom: 46px;
+  }
+
+  .media__description {
+    padding-right: 0;
+    margin-bottom: 33px;
   }
 
   .media__btn {
     width: 100%;
+    box-sizing: border-box;
   }
 }
 
 @media #{$desktop} {
+  .media {
+    margin-top: 0;
+    margin-bottom: 105px;
+  }
+
   .media__content {
     padding-left: 760px;
-    -webkit-box-sizing: border-box;
+    min-height: 455px;
+    box-sizing: border-box;
     position: relative;
+  }
+
+  .media__header {
+    width: 230px;
+    margin: 0 0 34px;
   }
 
   .media__title {
@@ -76,14 +133,26 @@
   .media__video {
     position: absolute;
     left: 0;
+    width: 668px;
+    height: 455px;
     img {
-      width: 680px;
+      width: 682px;
+      height: 455px;
     }
   }
 
   .media__footer {
+    width: 230px;
     margin-left: 0;
     margin-right: 55px;
     margin-bottom: 50px;
+  }
+
+  .media__description {
+    margin-bottom: 46px;
+  }
+
+  .media__btn {
+    margin-left: 2px;
   }
 }

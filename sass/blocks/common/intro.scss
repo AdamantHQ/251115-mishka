@@ -18,7 +18,7 @@
 .intro__title {
   @include title;
   margin: 0;
-  padding: 70px 0;
+  padding: 70px 0 77px;
   text-align: center;
 }
 
@@ -33,7 +33,7 @@
     }
   }
 
-  .intro--index .intro__delivery {
+  .intro__delivery {
     @include text;
     display: block;
     margin: 0;
@@ -43,6 +43,10 @@
 
   .intro__title {
     @include title-tablet;
+    padding: 33px 75px 80px 82px;
+  }
+
+  .intro--index .intro__title {
     padding: 92px 75px 100px;
   }
 }
@@ -52,6 +56,7 @@
     @include title-desktop;
     padding-left: 175px;
     padding-right: 175px;
+    padding-bottom: 100px;
   }
 }
 
