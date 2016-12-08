@@ -1,22 +1,31 @@
 .page-cart {
-  margin: 30px auto;
+  position: absolute;
+  z-index: 1000;
+  background: #FFFFFF;
+  top: 1046px;
+  margin: 0 auto;
   width: 320px;
-  border: 1px solid #c6c6c6;
+  padding: 30px 0 46px;
+  border-top: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
   &--hidden {
+    display: none;
+  }
+
+  &--visible {
     display: block;
   }
 }
 
 .page-cart__inner {
   width: 260px;
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
 .page-cart__title {
   display: block;
   @include title(25px);
-  margin: 35px 0 20px 0;
+  margin: 0 0 12px 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -28,7 +37,7 @@
 }
 
 .page-cart__form {
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .page-cart__form-inner {
@@ -49,9 +58,8 @@
 }
 
 .page-cart__radio {
-
   box-sizing: border-box;
-  padding: 18px;
+  padding: 16px;
   width: 82px;
   text-align: center;
   @include border(full, 2px);
@@ -66,6 +74,7 @@
   color: $color-contrast;
   background-color: $color-secondary;
   border: none;
+  padding: 18px;
 }
 
 @media #{$tablet} {

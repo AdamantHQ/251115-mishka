@@ -8,25 +8,27 @@
 
 .category__link {
   @include a-reset;
-  padding: 27.5px 0 27.5px 30px;
+  padding: 25px 29px 30px;
   @include text(19px, 24px, 700, $color-contrast);
   position: relative;
   &::after {
-    right: 35px;
-    top: 50%;
+
   }
   &--interior {
     background: $color-secondary;
     &::after {
       @include bg-image(icon-interior, 40px, 62px);
-      margin-top: -31px;
+      top: 23px;
+      right: 37px;
+
     }
   }
   &--toys {
     background: #56c3b2;
     &::after {
       @include bg-image(icon-toy, 60px, 60px);
-      margin-top: -30px;
+      top: 20px;
+      right: 27px;
     }
   }
 }
@@ -34,7 +36,7 @@
 @media #{$tablet} {
   .category {
     flex-direction: row;
-    margin-top: -110px;
+    margin-top: -118px;
   }
 
   .category__item {
@@ -42,7 +44,21 @@
   }
 
   .category__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
+    font-size: 20px;
+    line-height: 30px;
+    padding: 29px 36px;
+
+    &--interior {
+      &::after {
+        top: 30px;
+      }
+    }
+
+    &--toys {
+      &::after {
+        top: 31px;
+        right: 33px;
+      }
+    }
+   }
 }

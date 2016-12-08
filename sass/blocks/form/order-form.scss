@@ -81,11 +81,6 @@
   @include form-input-border;
 }
 
-.order-form__footer {
-  @include text(14px, 16px);
-}
-
-
 .order-form__textarea {
   @include border(full, 2px, #000);
   outline: none;
@@ -98,6 +93,14 @@
     @include text(17px, 18px);
     opacity: 0.3;
   }
+}
+
+.order-form__footer {
+  @include text(14px, 16px);
+}
+
+.order-form__btn {
+  @include btn;
 }
 
 @media #{$tablet} {

@@ -1,5 +1,6 @@
 .social {
   margin: 0;
+  margin-left: 5px;
   border-bottom: 1px solid #e5e5e5;
   display: flex;
   justify-content: center;
@@ -9,26 +10,31 @@
 .social__btn {
   position: relative;
   font-size: 0;
-  width: 30px;
-  height: 30px;
-  margin-right: 35px;
-  &:last-child {
-    margin-right: 0;
-  }
+
   &--instagram {
+    margin-right: 41px;
+    width: 22px;
+    height: 21px;
     &::before {
       @include bg-image(icon-insta, 22px, 21px);
     }
   }
   &--facebook {
+    margin-right: 39px;
+    margin-top: -3px;
+    width: 15px;
+    height: 28px;
     &::before {
       @include bg-image(icon-fb, 15px, 28px);
     }
   }
   &--twitter {
+    width: 23px;
+    height: 20px;
     &::before {
       @include bg-image(icon-twitter, 23px, 20px);
     }
+    margin-right: 6px;
 
   }
 }

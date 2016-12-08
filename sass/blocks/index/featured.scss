@@ -1,18 +1,18 @@
 .featured {
-  margin: 30px;
+  margin-top: 28px;
+  margin-bottom: 42px;
 }
 
 .featured__inner {
   @include centrify-all;
-  width: 100%;
 }
 
 .featured__header {
-  margin-bottom: 30px;
+  margin-bottom: 21px;
 }
 
 .featured__title {
-  margin: 0 0 10px 0;
+  margin: 0;
   @include title(25px);
 }
 
@@ -20,22 +20,19 @@
   @include subheader;
 }
 
-.featured__description {
-  p {
-    margin: 30px 0 20px 0;
-    @include text;
-  }
+.featured__text {
+  margin: 0;
+  @include text;
 }
 
 .featured__table {
-  margin: 20px 0 28px 0;
+  margin: 19px 0 28px 0;
   width: 100%;
+
   tr {
     @include border(bottom);
   }
-}
 
-.featured__table {
   td {
     @include text(15px, 20px);
     padding: 10px 0;
@@ -43,32 +40,41 @@
 }
 
 .featured__parameter {
-  width: 100px;
+  width: 97px;
 }
 
 .featured__image {
   background-color: $color-bg;
   width: 260px;
-  height: auto;
+  height: 315px;
   margin: 0 auto;
 }
 
-.featured__footer {
-  p {
-    padding: 25px;
-    margin: 0;
-    text-align: center;
-    @include text(17px, 24px, 700);
-  }
+.featured__price {
+  padding: 25px;
+  margin: 0;
+  text-align: center;
+  @include text(17px, 24px, 700);
+}
+
+.featured__btn {
+  @include btn;
+  font-size: 17px;
+  padding-top: 17px;
 }
 
 @media #{$tablet} {
+  .featured {
+    margin-top: 45px;
+  }
+
   .featured__inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    min-height: 513px
   }
 
   .featured__header {
@@ -76,46 +82,58 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 50px;
   }
 
   .featured__title {
+    margin-left: -3px;
     @include title-tablet;
   }
 
   .featured__label {
-    max-width: 120px;
+    max-width: 125px;
+    margin-top: 5px;
     text-align: center;
   }
 
   .featured__description {
     width: 290px;
-    p {
-      margin-top: 0;
-    }
+  }
+
+  .featured__text {
+    @include text(17px, 30px);
   }
 
   .featured__table {
-    padding-right: 50px;
+    margin-top: 37px;
   }
 
   .featured__image {
     width: 334px;
-    height: auto;
+    position: absolute;
+    right: 0;
+    top: 108px;
+    height: 404px;
     margin: 0;
     img {
-      width: 100%;
-      height: auto;
+      width: 334px;
+      height: 404px;
     }
   }
 
   .featured__footer {
+    margin-top: auto;
     width: 290px;
-    position: absolute;
-    bottom: 0;
+  }
+
+  .featured__price {
+    font-size: 20px;
+    padding-bottom: 35px;
+    padding-left: 29px;
   }
 
   .featured__btn {
-    width: 100%;
+    width: 254px;
   }
 }
 
@@ -123,17 +141,21 @@
 @media #{$desktop} {
   .featured {
     padding-left: 175px;
+    margin-top: 70px;
+    margin-bottom: 100px;
   }
 
   .featured__inner {
     width: 875px;
     position: relative;
+    min-height: 636px;
   }
 
   .featured__header {
+    margin-top: 52px;
     z-index: 2;
-    position: absolute;
-    top: 50px;
+    position: relative;
+
   }
 
   .featured__title {
@@ -145,14 +167,28 @@
     left: -150px;
   }
 
-  .featured__description {
-    margin-top: 150px;
-    p {
-      margin-bottom: 60px;
-    }
+  .featured__text {
+    margin-bottom: 50px;
+  }
+
+  .featured__price {
+    padding-bottom: 32px;
+    padding-left: 35px;
   }
 
   .featured__image {
+    top: 0;
     width: 525px;
+    height: 636px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
+
+  .featured__btn {
+    padding-top: 17px;
+    padding-bottom: 15px;
+  }
+;
 }

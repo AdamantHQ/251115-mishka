@@ -1,15 +1,14 @@
 .copyright {
-  @include title(19px, 18px);
-  padding: 30px;
+  @include title(19px, 28px);
+  padding: 22px 39px 23px 37px;
   margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .copyright__link {
   font-size: 0;
-  margin-left: 30px;
   width: 27px;
   height: 34px;
   position: relative;
