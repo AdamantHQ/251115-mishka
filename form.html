@@ -56,7 +56,7 @@
           <h2 class="order-form__title">Тип</h2>
 
           <div class="order-form__group">
-            <input class="order-form__input-radio" type="radio" name="type" id="type-1">
+            <input class="order-form__input-radio" type="radio" name="type" id="type-1" checked>
             <label class="order-form__radio" for="type-1">Аксессуар для интерьера</label>
             <input class="order-form__input-radio" type="radio" name="type" id="type-2">
             <label class="order-form__radio" for="type-2">Детская игрушка</label>
@@ -70,7 +70,7 @@
         <div class="order-form__inner">
           <h2 class="order-form__title">Цвет</h2>
 
-          <div class="order-form__group">
+          <div class="order-form__group order-form__group--checkbox">
             <input class="order-form__input-checkbox" id="checkbox1" type="checkbox" name="color-white" checked>
             <label class="order-form__checkbox" for="checkbox1">Белый</label>
             <input class="order-form__input-checkbox" id="checkbox2" type="checkbox" name="color-gray" checked>
@@ -94,13 +94,18 @@
           <h2 class="order-form__title">ФИО</h2>
 
           <div class="order-form__group">
-            <label class="order-form__text" for="firstname">Имя:</label>
-            <input class="order-form__input-text" id="firstname" type="text" name="firstname" placeholder="Введите ваше имя*" required>
-            <label class="order-form__text" for="lastname">Фамилия:</label>
-            <input class="order-form__input-text" id="lastname" type="text" name="lastname" placeholder="Введите вашу фамилию*" required>
-            <label class="order-form__text" for="middlename">Отчество:</label>
-            <input class="order-form__input-text" id="middlename" type="text" name="middlename" placeholder="Отчество, если желаете">
-          </div>
+            <div class="order-form__group-block">
+              <label class="order-form__text" for="firstname">Имя:</label>
+              <input class="order-form__input-text" id="firstname" type="text" name="firstname" placeholder="Введите ваше имя*" required>
+            </div>
+            <div class="order-form__group-block">
+              <label class="order-form__text" for="lastname">Фамилия:</label>
+              <input class="order-form__input-text" id="lastname" type="text" name="lastname" placeholder="Укажите фамилию*" required>
+            </div>
+            <div class="order-form__group-block">
+              <label class="order-form__text" for="middlename">Отчество:</label>
+              <input class="order-form__input-text" id="middlename" type="text" name="middlename" placeholder="Отчество, если желаете">
+            </div>          </div>
         </div>
       </fieldset>
 
@@ -115,7 +120,7 @@
         </div>
 
         <div class="order-form__inner">
-          <h2 class="order-form__title">E-mail</h2>
+          <h2 class="order-form__title">E&#8209;mail</h2>
           <div class="order-form__group">
             <input class="order-form__input-email" type="email" name="email" placeholder="Ваш Email*" required>
           </div>
@@ -128,7 +133,7 @@
         <div class="order-form__inner">
           <h2 class="order-form__title">Доп</h2>
           <div class="order-form__group">
-            <textarea class="order-form__textarea" name="extra" cols="24" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="order-form__textarea" name="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </div>
       </fieldset>
