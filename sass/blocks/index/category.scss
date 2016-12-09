@@ -12,17 +12,31 @@
   @include text(19px, 24px, 700, $color-contrast);
   position: relative;
 
+  &:active {
+    color: $color-contrast-active;
+  }
+
   &--interior {
-    background: $color-secondary;
+    background-color: $color-secondary;
+
+    &:hover {
+      background-color: #59d5bc;
+    }
+
     &::after {
       @include bg-image(icon-interior, 40px, 62px);
       top: 23px;
       right: 37px;
-
     }
   }
+
   &--toys {
-    background: #56c3b2;
+    background-color: #56c3b2;
+
+    &:hover {
+      background-color: #46c1ae;
+    }
+
     &::after {
       @include bg-image(icon-toy, 60px, 60px);
       top: 20px;
@@ -59,4 +73,10 @@
       }
     }
    }
+
+  .category__link:hover {
+    position: relative;
+    top: -5px;
+  }
+
 }

@@ -20,6 +20,14 @@
 
 @mixin form-input-border {
   border-bottom: 2px solid #000000;
+
+  &:hover {
+    border-bottom-color: $color-secondary;
+  }
+
+  &:focus {
+    border-bottom-color: $color-secondary;
+  }
 }
 
 @mixin bg-image($filename, $width, $height) {
@@ -68,6 +76,16 @@
   width: $width;
   cursor: pointer;
   padding: 16px 17px 17px 17px;
+
+  &:hover {
+    background-color: $color-text;
+    color: $color-contrast;
+  }
+
+  &:active {
+    color: $color-contrast-active;
+  }
+
 }
 
 @mixin centrify-all {
@@ -78,5 +96,15 @@
   }
   @media #{$desktop} {
     width: 1050px;
+  }
+}
+
+@mixin hovers {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

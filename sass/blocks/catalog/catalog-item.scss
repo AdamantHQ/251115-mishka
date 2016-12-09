@@ -2,6 +2,14 @@
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog-item__link {
@@ -28,6 +36,8 @@
   @include title(17px, 24px);
   text-decoration: none;
   margin-bottom: 5px;
+
+  @include hovers;
 }
 
 .catalog-item__text {

@@ -3,11 +3,14 @@
 /*Colors*/
 
 $color-title: #000000;
+$color-title-active: rgba(0, 0, 0, 0.3);
 $color-secondary: #63D1BB;
+$color-secondary-active: rgba(70, 193, 174, 0.3);
 $color-text: #444444;
 $color-bg: #F1F1F1;
 $color-contrast: #FFFFFF;
-$color-border: #ECECEC;
+$color-contrast-active: rgba(256, 256, 256, 0.3);
+$color-border: rgba(0, 0, 0, 0.1);
 
 /*Font*/
 $font-main: "Open Sans", "Arial", sans-serif;

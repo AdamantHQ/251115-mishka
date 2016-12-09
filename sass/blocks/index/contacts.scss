@@ -35,6 +35,15 @@
   border-bottom: 1px solid $color-secondary;
   color: $color-text;
   text-decoration: none;
+
+  &:hover {
+    color: $color-secondary;
+  }
+
+  &:active {
+    color: $color-secondary-active;
+    border-bottom-color: $color-secondary-active;
+  }
 }
 
 .contacts__text {

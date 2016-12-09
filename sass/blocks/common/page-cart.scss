@@ -62,12 +62,25 @@
   @include border(full, 2px);
   @include title(17px, 16px);
   cursor: pointer;
+
+  &:hover {
+    border-color: $color-title-active;
+  }
 }
 
 .page-cart__btn {
   @include btn(17px, 100%, $color-secondary, $color-contrast);
   border: none;
   padding: 18px;
+
+  &:hover {
+    background-color: $color-secondary;
+    color: rgba(256, 256, 256, 0.6);
+  }
+
+  &:active {
+    color: rgba(256, 256, 256, 0.3);
+  }
 }
 
 @media #{$tablet} {

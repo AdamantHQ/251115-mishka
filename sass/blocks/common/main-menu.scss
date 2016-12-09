@@ -85,17 +85,17 @@
   }
 }
 
-.main-menu__logo {
-  vertical-align: top;
-
-}
-
 .main-menu__link {
   display: block;
   text-decoration: none;
   @include title(17px, 24px);
+  @include hovers;
 }
 
+.main-menu__logo {
+  //TODO: not for index;
+  @include hovers;
+}
 
 
 @media #{$tablet} {
@@ -215,3 +215,4 @@
     }
   }
 }
+

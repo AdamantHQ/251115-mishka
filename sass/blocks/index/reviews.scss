@@ -69,6 +69,8 @@
     &::before {
       @include bg-image(icon-left-arrow, 50px, 26px);
     }
+
+    @include hovers;
   }
   &--next {
     border-left: none;
@@ -97,7 +99,6 @@
     @include title-tablet;
     padding-top: 70px;
     max-width: 334px;
-
   }
 
   .reviews__btn {
