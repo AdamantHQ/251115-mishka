@@ -79,8 +79,6 @@
 
 .reviews__btn {
   @include btn;
-  font-size: 18px;
-  padding-top: 16px;
 }
 
 @media #{$tablet} {

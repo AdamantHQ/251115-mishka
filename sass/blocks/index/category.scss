@@ -11,9 +11,7 @@
   padding: 25px 29px 30px;
   @include text(19px, 24px, 700, $color-contrast);
   position: relative;
-  &::after {
 
-  }
   &--interior {
     background: $color-secondary;
     &::after {
@@ -46,7 +44,7 @@
   .category__link {
     font-size: 20px;
     line-height: 30px;
-    padding: 29px 36px;
+    padding: 28px 36px 30px;
 
     &--interior {
       &::after {

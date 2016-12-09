@@ -44,9 +44,7 @@
 }
 
 .media__btn {
-  @include btn;
-  width: 188px;
-  font-size: 17px;
+  @include btn(17px, 188px);
   padding-left: 0;
   padding-right: 0;
 }

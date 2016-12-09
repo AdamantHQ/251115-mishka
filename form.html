@@ -55,7 +55,7 @@
         <div class="order-form__inner">
           <h2 class="order-form__title">Тип</h2>
 
-          <div class="order-form__group">
+          <div class="order-form__group order-form__group--radio">
             <input class="order-form__input-radio" type="radio" name="type" id="type-1" checked>
             <label class="order-form__radio" for="type-1">Аксессуар для интерьера</label>
             <input class="order-form__input-radio" type="radio" name="type" id="type-2">
@@ -93,7 +93,7 @@
         <div class="order-form__inner">
           <h2 class="order-form__title">ФИО</h2>
 
-          <div class="order-form__group">
+          <div class="order-form__group order-form__group--credentials">
             <div class="order-form__group-block">
               <label class="order-form__text" for="firstname">Имя:</label>
               <input class="order-form__input-text" id="firstname" type="text" name="firstname" placeholder="Введите ваше имя*" required>
@@ -114,14 +114,14 @@
       <fieldset class="order-form__section">
         <div class="order-form__inner">
           <h2 class="order-form__title">Тел</h2>
-          <div class="order-form__group">
+          <div class="order-form__group order-form__group--contacts">
             <input class="order-form__input-tel" type="tel" name="phone" placeholder="+7 XXX XX XX*" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" required>
           </div>
         </div>
 
         <div class="order-form__inner">
           <h2 class="order-form__title">E&#8209;mail</h2>
-          <div class="order-form__group">
+          <div class="order-form__group order-form__group--contacts">
             <input class="order-form__input-email" type="email" name="email" placeholder="Ваш Email*" required>
           </div>
         </div>

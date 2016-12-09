@@ -37,3 +37,9 @@
 
   }
 }
+
+@media #{$tablet} {
+  .social {
+    border-bottom: none;
+  }
+}

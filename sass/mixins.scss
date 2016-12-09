@@ -58,15 +58,14 @@
   text-transform: uppercase;
 }
 
-@mixin btn {
-  @include subheader(18px, 16px, 700, $color-text);
-  background: transparent;
+@mixin btn ($fsize: 18px, $width: 222px, $bgcolor: transparent, $color: $color-text){
+  @include subheader($fsize, 16px, 700, $color);
+  background-color: $bgcolor;
   border: 2px solid $color-text;
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  width: 222px;
+  width: $width;
   cursor: pointer;
   padding: 16px 17px 17px 17px;
 }
