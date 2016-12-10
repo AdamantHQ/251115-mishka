@@ -55,6 +55,3 @@ if (pageCart) {
     toggleModal();
   })
 }
-
-
-
