@@ -1,12 +1,14 @@
 .page-cart {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   background: #FFFFFF;
-  top: 1046px;
+  top: 50vh;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: 320px;
   border-top: 1px solid #c6c6c6;
+  border-right: 1px solid #c6c6c6;
+  border-left: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
   &--hidden {
     display: none;
@@ -86,7 +88,7 @@
 @media #{$tablet} {
   .page-cart {
     width: 566px;
-    top: 1530px;
+    //top: 1530px;
     border: 1px solid #c6c6c6;
   }
 
@@ -96,6 +98,7 @@
   }
 
   .page-cart__title {
+    width: 355px;
     @include title(30px, 57px);
     margin-bottom: 15px;
   }
@@ -119,6 +122,6 @@
 
 @media #{$desktop} {
   .page-cart {
-    top: 1111px;
+    //top: 1111px;
   }
 }

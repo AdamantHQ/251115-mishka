@@ -92,10 +92,11 @@
   @include hovers;
 }
 
-.main-menu__logo {
-  //TODO: not for index;
+.main-menu__logo[href] {
   @include hovers;
 }
+
+
 
 
 @media #{$tablet} {

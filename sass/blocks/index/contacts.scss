@@ -51,11 +51,17 @@
 }
 
 .contacts__map {
-  //temporarily
-  margin-left: -30px;
-  width: 320px;
+  position: relative;
   height: 457px;
   margin-bottom: 39px;
+
+  iframe {
+    border: none;
+    position: absolute;
+    left: -30px;
+    height: 457px;
+    width: 320px;
+  }
 }
 
 .contacts__btn {
@@ -97,14 +103,16 @@
   }
 
   .contacts__map {
-    //tmp
-    margin-left: -50px;
+    height: 457px;
     margin-bottom: 55px;
-    width: 768px;
-    img {
+
+    iframe {
+      height: 457px;
       width: 768px;
+      left: -50px;
     }
   }
+
 
   .contacts__btn {
     align-self: center;
@@ -148,8 +156,10 @@
   .contacts__map {
     position: absolute;
     width: 525px;
+    top: 0;
     right: 0;
-    img {
+    iframe {
+      left: 0;
       width: 525px;
       height: 457px;
     }

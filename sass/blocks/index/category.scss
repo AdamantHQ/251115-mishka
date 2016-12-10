@@ -75,8 +75,8 @@
    }
 
   .category__link:hover {
-    position: relative;
-    top: -5px;
+    transform: translateY(-5px);
+    transition: all 0.2s;
   }
 
 }
