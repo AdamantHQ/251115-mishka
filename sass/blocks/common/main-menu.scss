@@ -4,67 +4,103 @@
 
 .main-menu__btn {
   position: absolute;
-  top: 30px;
-  right: 30px;
   width: 21px;
   height: 21px;
   cursor: pointer;
-  &::before {
-    @include bg-image(icon-menu-close, 21px, 21px);
+  &--closed {
+    top: 33px;
+    right: 31px;
+    &::before {
+      @include bg-image(icon-menu-open, 21px, 21px);
+    }
+  }
+  &--opened {
+    top: 30px;
+    right: 30px;
+    &::before {
+      @include bg-image(icon-menu-close, 21px, 21px);
+    }
+  }
+}
+
+@media #{$mobile-only} {
+  .main-menu__list--closed {
+    .main-menu__item {
+      display: none;
+    }
+
+    .main-menu__item--logo {
+      display: block;
+    }
   }
 
+  .main-menu__list--opened {
+    .main-menu__item {
+      display: block;
+    }
+  }
 }
 
 .main-menu__list {
   @include ul-reset;
   display: flex;
   flex-direction: column;
+
+  .main-menu__item--promo {
+    display: none;
+  }
 }
 
 .main-menu__item {
-  padding-left: 75px;
+  padding: 28px 0 28px 75px;
   @include border(bottom);
+
   &--logo {
-    padding: 22.5px 0;
+    height: 35px;
+    padding: 21.5px 0;
+    @include border(top);
     text-align: center;
   }
+
   &--search {
     &::before {
       @include bg-image(icon-search, 18px, 18px);
+      left: 32px;
     }
   }
+
   &--cart {
     &::before {
       @include bg-image(icon-cart, 19px, 21px);
+      left: 30px;
     }
   }
+
   &--search,
   &--cart {
     position: relative;
     &::before {
-      left: 30px;
       top: 30px;
     }
-  }
-
-  &--promo,
-  &--delivery {
-    display: none;
   }
 }
 
 .main-menu__link {
   display: block;
   text-decoration: none;
-  padding: 28px 0;
   @include title(17px, 24px);
+  @include hovers;
 }
+
+.main-menu__logo[href] {
+  @include hovers;
+}
+
+
 
 
 @media #{$tablet} {
   .main-menu {
-    position: absolute;
-    top: 0;
     width: 100%;
   }
 
@@ -77,66 +113,60 @@
     margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
   }
 
   .main-menu__item {
     border: none;
 
     &--logo {
-      padding: 23.5px 0;
       order: 0;
-      flex-grow: 1;
-      flex-basis: 320px;
+      width: 320px;
+      height: 35px;
       text-align: left;
+      padding: 0;
     }
 
     &--catalog,
     &--form {
-      .main-menu__link {
-        padding: 22px 0;
-        font-size: 15px;
-      }
-      @include padding-clear;
-      margin-right: 35px;
+      padding: 19px 0;
+      margin-right: 36px;
       order: 2;
-    }
 
-    &--search,
-    &--cart {
       .main-menu__link {
-        padding: 32px 0;
-      }
-      order: 1;
-      &::before {
-        left: 34px;
-        top: 36px;
+        font-size: 15px;
       }
     }
 
     &--search {
+      order: 1;
       padding: 0;
-      flex-basis: 81px;
+      align-self: stretch;
+      width: 82px;
       @include border(left);
       @include border(right);
+
+      &::before {
+        left: 33px;
+        top: 36px;
+      }
+
       .main-menu__link {
         font-size: 0;
       }
     }
 
     &--cart {
-      padding-right: 0;
-      padding-left: 85px;
-      text-align: right;
-    }
+      padding: 32px 0 32px 80px;
+      order: 1;
+      width: 184px;
 
-    &--delivery {
-      flex-grow: 1;
-      display: block;
-      padding: 22px 0;
-      @include text;
       text-align: right;
-      order: 5;
+
+      &::before {
+        left: 31px;
+        top: 35px;
+      }
     }
   }
 }
@@ -145,35 +175,41 @@
 @media #{$desktop} {
   .main-menu__list {
     width: 1050px;
+
+    .main-menu__item--promo {
+      display: block;
+    }
   }
 
   .main-menu__item {
     &--logo {
-      flex-basis: 86px;
+      width: 149px;
+      text-align: center;
+      margin-right: auto;
       order: 1;
     }
     &--catalog,
     &--form {
       order: 0;
+      padding: 28px 0;
       .main-menu__link {
-        padding: 28px 0;
         @include title(17px, 24px);
       }
     }
 
     &--catalog {
-      flex-basis: 185px;
+      width: 185px;
       @include border(right);
     }
     &--form {
-      flex-basis: 265px;
+      width: 235px;
       margin-right: 0;
     }
     &--promo {
-      display: block;
       order: 2;
-      @include padding-clear;
-      margin-right: 75px;
+      width: 185px;
+      padding: 19px 0;
+      margin-right: 35px;
       .main-menu__link {
         @include title(15px, 24px);
       }

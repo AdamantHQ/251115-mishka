@@ -9,6 +9,7 @@
   text-decoration: none;
 }
 
+
 @mixin border($side, $width: 1px, $color: $color-border) {
   @if $side == full {
     border: $width solid $color;
@@ -19,6 +20,14 @@
 
 @mixin form-input-border {
   border-bottom: 2px solid #000000;
+
+  &:hover {
+    border-bottom-color: $color-secondary;
+  }
+
+  &:focus {
+    border-bottom-color: $color-secondary;
+  }
 }
 
 @mixin bg-image($filename, $width, $height) {
@@ -27,17 +36,6 @@
   height: $height;
   position: absolute;
   background: url("../img/#{$filename}.svg") no-repeat;
-}
-
-@mixin btn {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
-  cursor: pointer;
-  box-sizing: border-box;
-  padding: 18px;
 }
 
 @mixin font-props($size, $line, $weight, $color) {
@@ -68,6 +66,28 @@
   text-transform: uppercase;
 }
 
+@mixin btn ($fsize: 18px, $width: 222px, $bgcolor: transparent, $color: $color-text){
+  @include subheader($fsize, 16px, 700, $color);
+  background-color: $bgcolor;
+  border: 2px solid $color-text;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: $width;
+  cursor: pointer;
+  padding: 16px 17px 17px 17px;
+
+  &:hover {
+    background-color: $color-text;
+    color: $color-contrast;
+  }
+
+  &:active {
+    color: $color-contrast-active;
+  }
+
+}
+
 @mixin centrify-all {
   margin: 0 auto;
   width: 260px;
@@ -79,7 +99,12 @@
   }
 }
 
-@mixin padding-clear {
-  padding-left: 0;
-  padding-right: 0;
+@mixin hovers {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

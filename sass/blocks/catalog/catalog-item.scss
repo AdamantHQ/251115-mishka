@@ -1,18 +1,31 @@
 .catalog-item {
   margin-top: 30px;
-  @include border(full);
   display: flex;
   flex-direction: column;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.catalog-item__link {
+  width: 260px;
+  height: 195px;
 }
 
 .catalog-item__description {
-  padding: 25px 30px;
+  @include border(full);
+  padding: 25px 27px 27px;
   display: flex;
   flex-direction: column;
 }
 
 .catalog-item__description-footer {
-  padding-top: 25px;
+  padding-top: 22px;
   @include border(top);
   display: flex;
   justify-content: space-between;
@@ -23,6 +36,8 @@
   @include title(17px, 24px);
   text-decoration: none;
   margin-bottom: 5px;
+
+  @include hovers;
 }
 
 .catalog-item__text {
@@ -46,11 +61,21 @@
 
 @media #{$tablet} {
   .catalog-item {
+    margin-top: 54px;
+  }
+
+  .catalog-item {
     flex-direction: row;
   }
 
+  .catalog-item__link {
+    width: 334px;
+    height: 334px;
+  }
+
   .catalog-item__picture {
-    height: 335px;
+    width: 334px;
+    height: 334px;
   }
 
   .catalog-item__description {
@@ -58,29 +83,63 @@
     width: 100%;
     justify-content: space-between;
   }
+
+  .catalog-item__title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .catalog-item__text {
+    font-size: 15px;
+  }
+
+  .catalog-item__description-footer {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .catalog-item__price {
+    font-size: 17px;
+  }
 }
 
 
 @media #{$desktop} {
   .catalog-item {
     flex-direction: column;
-    width: 315px;
-    margin-right: 50px;
+
+    width: 316px;
+    margin-top: 0;
+    margin-right: 51px;
     &:last-child {
       margin-right: 0;
     }
   }
 
+  .catalog-item__link {
+    width: 316px;
+    height: 462px;
+  }
+
+  .catalog-item__picture {
+    width: 316px;
+    height: 462px;
+  }
+
+  .catalog-item__text {
+    margin: 0;
+  }
+
+  .catalog-item__description-header {
+    margin-bottom: 12px;
+  }
+
   .catalog-item__description {
+    padding-top: 27px;
     height: 100%;
   }
 
   .catalog-item__description-footer {
-    border: none;
-  }
-
-  .catalog-item__picture {
-    width: 100%;
-    height: 460px;
+    margin-left: 0;
   }
 }

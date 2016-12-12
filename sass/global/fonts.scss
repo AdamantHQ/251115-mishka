@@ -1,7 +1,17 @@
 @font-face {
+  font-weight: normal;
   font-family: "Open Sans";
+  font-style: normal;
+
   src:  url("../fonts/opensans.woff2") format("woff2"),
         url("../fonts/opensans.woff") format("woff");
 }
 
-//Немного не понял, что делать с opensansbold. Вставлять и пользоваться им вместо font-weight?
+@font-face {
+  font-weight: 700;
+  font-family: "Open Sans";
+  font-style: normal;
+
+  src:  url("../fonts/opensansbold.woff2") format("woff2"),
+        url("../fonts/opensansbold.woff") format("woff");
+}

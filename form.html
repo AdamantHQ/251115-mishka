@@ -13,9 +13,9 @@
   <header class="page-header">
 
     <nav class="main-menu">
-      <span class="main-menu__btn main-menu__btn--closed"></span>
+      <span class="main-menu__btn main-menu__btn--opened"></span>
 
-      <ul class="main-menu__list main-menu__list--closed main-menu__list--nojs">
+      <ul class="main-menu__list main-menu__list--opened main-menu__list--nojs">
 
         <li class="main-menu__item main-menu__item--logo">
           <a class="main-menu__logo" href="index.html">
@@ -28,15 +28,14 @@
         <li class="main-menu__item main-menu__item--cart"><a class="main-menu__link" href="#">Корзина: пока пуста</a></li>
         <li class="main-menu__item main-menu__item--promo"><a class="main-menu__link" href="#">Новые поступления</a></li>
         <li class="main-menu__item main-menu__item--promo"><a class="main-menu__link" href="#">Распродажа</a></li>
-        <li class="main-menu__item main-menu__item--delivery"><span>Бесплатная доставка по России</span></li>
-
       </ul>
     </nav>
 
-
-
     <div class="intro">
-      <h1 class="intro__title">Вязание на заказ</h1>
+      <div class="intro__inner">
+        <p class="intro__delivery">Бесплатная доставка по России</p>
+        <h1 class="intro__title">Вязание на заказ</h1>
+      </div>
     </div>
 
   </header>
@@ -56,8 +55,8 @@
         <div class="order-form__inner">
           <h2 class="order-form__title">Тип</h2>
 
-          <div class="order-form__group">
-            <input class="order-form__input-radio" type="radio" name="type" id="type-1">
+          <div class="order-form__group order-form__group--radio">
+            <input class="order-form__input-radio" type="radio" name="type" id="type-1" checked>
             <label class="order-form__radio" for="type-1">Аксессуар для интерьера</label>
             <input class="order-form__input-radio" type="radio" name="type" id="type-2">
             <label class="order-form__radio" for="type-2">Детская игрушка</label>
@@ -71,7 +70,7 @@
         <div class="order-form__inner">
           <h2 class="order-form__title">Цвет</h2>
 
-          <div class="order-form__group">
+          <div class="order-form__group order-form__group--checkbox">
             <input class="order-form__input-checkbox" id="checkbox1" type="checkbox" name="color-white" checked>
             <label class="order-form__checkbox" for="checkbox1">Белый</label>
             <input class="order-form__input-checkbox" id="checkbox2" type="checkbox" name="color-gray" checked>
@@ -94,14 +93,19 @@
         <div class="order-form__inner">
           <h2 class="order-form__title">ФИО</h2>
 
-          <div class="order-form__group">
-            <label class="order-form__text" for="firstname">Имя:</label>
-            <input class="order-form__input-text" id="firstname" type="text" name="firstname" placeholder="Введите ваше имя*" required>
-            <label class="order-form__text" for="lastname">Фамилия:</label>
-            <input class="order-form__input-text" id="lastname" type="text" name="lastname" placeholder="Введите вашу фамилию*" required>
-            <label class="order-form__text" for="middlename">Отчество:</label>
-            <input class="order-form__input-text" id="middlename" type="text" name="middlename" placeholder="Отчество, если желаете">
-          </div>
+          <div class="order-form__group order-form__group--credentials">
+            <div class="order-form__group-block">
+              <label class="order-form__text" for="firstname">Имя:</label>
+              <input class="order-form__input-text" id="firstname" type="text" name="firstname" placeholder="Введите ваше имя*" required>
+            </div>
+            <div class="order-form__group-block">
+              <label class="order-form__text" for="lastname">Фамилия:</label>
+              <input class="order-form__input-text" id="lastname" type="text" name="lastname" placeholder="Укажите фамилию*" required>
+            </div>
+            <div class="order-form__group-block">
+              <label class="order-form__text" for="middlename">Отчество:</label>
+              <input class="order-form__input-text" id="middlename" type="text" name="middlename" placeholder="Отчество, если желаете">
+            </div>          </div>
         </div>
       </fieldset>
 
@@ -110,14 +114,14 @@
       <fieldset class="order-form__section">
         <div class="order-form__inner">
           <h2 class="order-form__title">Тел</h2>
-          <div class="order-form__group">
+          <div class="order-form__group order-form__group--contacts">
             <input class="order-form__input-tel" type="tel" name="phone" placeholder="+7 XXX XX XX*" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" required>
           </div>
         </div>
 
         <div class="order-form__inner">
-          <h2 class="order-form__title">E-mail</h2>
-          <div class="order-form__group">
+          <h2 class="order-form__title">E&#8209;mail</h2>
+          <div class="order-form__group order-form__group--contacts">
             <input class="order-form__input-email" type="email" name="email" placeholder="Ваш Email*" required>
           </div>
         </div>
@@ -129,7 +133,7 @@
         <div class="order-form__inner">
           <h2 class="order-form__title">Доп</h2>
           <div class="order-form__group">
-            <textarea class="order-form__textarea" name="extra" cols="24" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="order-form__textarea" name="extra" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </div>
       </fieldset>
@@ -138,7 +142,7 @@
 
       <div class="order-form__footer">
         <p class="order-form__footnote">*Поля обязательны для заполнения</p>
-        <button class="order-form__btn btn" type="submit">Отправить заказ</button>
+        <button class="order-form__btn" type="submit">Отправить заказ</button>
       </div>
     </form>
   </main>
@@ -169,6 +173,6 @@
   </footer>
 
 
+  <script src="js/app.js"></script>
 </body>
-
 </html>

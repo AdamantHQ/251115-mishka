@@ -1,8 +1,0 @@
-.btn {
-  @include btn;
-  @include subheader(17px, 16px, 700);
-  color: $color-text;
-  background: transparent;
-  border: 2px solid $color-text;
-
-}

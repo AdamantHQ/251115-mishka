@@ -1,22 +1,33 @@
 .page-cart {
-  margin: 30px auto;
+  position: fixed;
+  z-index: 1000;
+  background: #FFFFFF;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 320px;
-  border: 1px solid #c6c6c6;
+  border-top: 1px solid #c6c6c6;
+  border-right: 1px solid #c6c6c6;
+  border-left: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
   &--hidden {
+    display: none;
+  }
+
+  &--visible {
     display: block;
   }
 }
 
 .page-cart__inner {
   width: 260px;
-  margin: 30px auto;
+  margin: 30px auto 46px;
 }
 
 .page-cart__title {
   display: block;
   @include title(25px);
-  margin: 35px 0 20px 0;
+  margin: 0 0 12px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -28,11 +39,14 @@
 }
 
 .page-cart__form {
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .page-cart__form-inner {
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .page-cart__input-radio {
@@ -42,42 +56,72 @@
   }
 }
 
-.page-cart__form-inner {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .page-cart__radio {
-
   box-sizing: border-box;
-  padding: 18px;
+  padding: 16px;
   width: 82px;
   text-align: center;
   @include border(full, 2px);
   @include title(17px, 16px);
   cursor: pointer;
+
+  &:hover {
+    border-color: $color-title-active;
+  }
 }
 
 .page-cart__btn {
-  @include btn;
-  @include subheader;
-  width: 100%;
-  color: $color-contrast;
-  background-color: $color-secondary;
+  @include btn(17px, 100%, $color-secondary, $color-contrast);
   border: none;
+  padding: 18px;
+
+  &:hover {
+    background-color: $color-secondary;
+    color: rgba(256, 256, 256, 0.6);
+  }
+
+  &:active {
+    color: rgba(256, 256, 256, 0.3);
+  }
 }
 
 @media #{$tablet} {
   .page-cart {
-    width: 570px;
+    width: 566px;
+    //top: 1530px;
+    border: 1px solid #c6c6c6;
   }
 
   .page-cart__inner {
+    margin-top: 33px;
     width: 350px;
+  }
+
+  .page-cart__title {
+    width: 355px;
+    @include title(30px, 57px);
+    margin-bottom: 15px;
+  }
+
+  .page-cart__subtitle {
+    font-size: 17px;
+  }
+
+  .page-cart__form {
+    margin-top: 21px;
+  }
+
+  .page-cart__form-inner {
+    margin-bottom: 31px;
   }
 
   .page-cart__radio {
     width: 112px;
+  }
+}
+
+@media #{$desktop} {
+  .page-cart {
+    //top: 1111px;
   }
 }

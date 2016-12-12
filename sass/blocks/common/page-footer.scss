@@ -20,16 +20,24 @@
   .page-footer__wrapper {
     align-items: center;
     flex-direction: row;
-    > * {
-      flex-basis: 33%;
-    }
+    justify-content: space-between;
+    min-height: 143px;
   }
 
   .page-footer__logo {
+    width: 223px;
     display: block;
+    img {
+      width: 102px;
+      height: 34px;
+    }
   }
 
   .page-footer__social {
-    min-height: 143px;
+    width: 222px;
+  }
+
+  .page-footer__copyright {
+    width: 223px;
   }
 }
