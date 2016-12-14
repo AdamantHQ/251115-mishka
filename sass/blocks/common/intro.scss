@@ -7,9 +7,6 @@
   }
 }
 
-.intro__inner {
-  @include centrify-all;
-}
 
 .intro__delivery {
   display: none;
@@ -17,7 +14,8 @@
 
 .intro__title {
   @include title;
-  margin: 0;
+  max-width: 260px;
+  margin: 0 auto;
   padding: 70px 0 77px;
   text-align: center;
 }
@@ -36,13 +34,15 @@
   .intro__delivery {
     @include text;
     display: block;
-    margin: 0;
+    max-width: 668px;
+    margin: 0 auto;
     padding: 19px 0;
     text-align: right;
   }
 
   .intro__title {
     @include title-tablet;
+    max-width: 668px;
     padding: 33px 75px 80px 82px;
   }
 
@@ -54,8 +54,13 @@
 @media #{$desktop} {
   .intro__title {
     @include title-desktop;
+    max-width: 1050px;
     padding-left: 175px;
     padding-right: 175px;
     padding-bottom: 100px;
+  }
+
+  .intro__delivery {
+    max-width: 1050px;
   }
 }

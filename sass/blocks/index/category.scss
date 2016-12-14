@@ -74,8 +74,11 @@
     }
   }
 
-  .category__link:hover {
+  .category__item:hover {
     transform: translateY(-5px);
     transition: all 0.2s;
+    &:after {
+      bottom: 0;
+    }
   }
 }

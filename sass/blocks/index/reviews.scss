@@ -102,7 +102,6 @@
   }
 
   .reviews__btn {
-    order: 1;
     width: auto;
     max-width: 300px;
     padding-left: 38px;
@@ -112,7 +111,7 @@
 
   .reviews__list {
     margin: 46px 0;
-    order: 2;
+    order: 1;
   }
 
   .reviews__text {

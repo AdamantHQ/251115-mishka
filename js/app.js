@@ -40,7 +40,7 @@ if (pageCart) {
       button.addEventListener("click", function (event) {
         event.preventDefault();
         toggleModal();
-    });
+      });
 
     });
   }
@@ -53,5 +53,5 @@ if (pageCart) {
 
   overlay.addEventListener("click", function () {
     toggleModal();
-  })
+  });
 }
