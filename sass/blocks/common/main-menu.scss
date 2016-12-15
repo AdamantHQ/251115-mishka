@@ -1,5 +1,7 @@
 .main-menu {
   margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .main-menu__btn {
@@ -7,6 +9,7 @@
   width: 21px;
   height: 21px;
   cursor: pointer;
+  z-index: 1000;
   &--closed {
     top: 33px;
     right: 31px;
@@ -54,49 +57,53 @@
   }
 }
 
-
 .main-menu__item {
   padding: 28px 0 28px 75px;
   @include border(bottom);
+  position: relative;
 
   &--logo {
     padding: 21px 0 22px;
     @include border(top);
     justify-content: center;
-
-    img {
-      display: block;
-    }
-  }
-
-  &--search {
-    &::before {
-      @include bg-image(icon-search, 18px, 18px);
-      left: 32px;
-    }
-  }
-
-  &--cart {
-    &::before {
-      @include bg-image(icon-cart, 19px, 21px);
-      left: 30px;
-    }
-  }
-
-  &--search,
-  &--cart {
-    position: relative;
-    &::before {
-      top: 30px;
-    }
   }
 }
+
+.main-menu__item svg {
+  position: absolute;
+  left: 30px;
+  top: 32px;
+  opacity: 0.2;
+}
+
+
 
 .main-menu__link {
   display: block;
   text-decoration: none;
   @include title(17px, 24px);
+}
+
+.main-menu__link[href] {
   @include hovers;
+}
+
+.main-menu__link--active {
+  color: #7f6d62;
+}
+
+.main-menu__link[href]:hover svg {
+  opacity: 1;
+  fill: $color-secondary;
+}
+
+.main-menu__logo {
+  display: block;
+  img {
+    display: block;
+    width: 86px;
+    height: auto;
+  }
 }
 
 .main-menu__logo[href] {
@@ -124,13 +131,17 @@
     align-items: center;
   }
 
+  .main-menu__logo img {
+    width: 113px;
+    margin-left: -2px;
+  }
+
   .main-menu__item {
     border: none;
 
     &--logo {
       order: 0;
       width: 320px;
-      height: 35px;
       text-align: left;
       padding: 0;
     }
@@ -154,9 +165,9 @@
       @include border(left);
       @include border(right);
 
-      &::before {
-        left: 33px;
+      svg {
         top: 36px;
+        left: 33px;
       }
 
       .main-menu__link {
@@ -165,15 +176,14 @@
     }
 
     &--cart {
-      padding: 32px 0 32px 80px;
+      padding: 31px 0 33px 80px;
       order: 1;
       width: 184px;
-
       text-align: right;
 
-      &::before {
-        left: 31px;
+      svg {
         top: 35px;
+        left: 32px;
       }
     }
   }
@@ -189,6 +199,10 @@
     }
   }
 
+  .main-menu__logo img {
+    width: 149px;
+  }
+
   .main-menu__item {
     &--logo {
       width: 149px;
@@ -202,6 +216,9 @@
       padding: 28px 0;
       .main-menu__link {
         @include title(17px, 24px);
+        &--active {
+          color: #7f6d62;
+        }
       }
     }
 
@@ -210,9 +227,14 @@
       @include border(right);
     }
     &--form {
-      width: 235px;
+      width: 230px;
       margin-right: 0;
     }
+
+    &--cart {
+      padding-right: 2px;
+    }
+
     &--promo {
       order: 2;
       width: 185px;

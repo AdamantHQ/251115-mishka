@@ -32,10 +32,11 @@
   .page-footer__logo {
     width: 223px;
     display: block;
-    img {
-      width: 102px;
-      height: 34px;
-    }
+  }
+
+  .page-footer__logo-link {
+    @include hovers-footer;
+
   }
 
   .page-footer__social {

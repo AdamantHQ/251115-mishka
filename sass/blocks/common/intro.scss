@@ -4,6 +4,10 @@
   &--index {
     background: #f9f9f9 url("../img/hero-mobile@1x.jpg") 50% -20px no-repeat;
     min-height: 282px;
+    @media #{$retina} {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px auto;
+    }
   }
 }
 
@@ -25,9 +29,16 @@
     @include border(top);
     margin-top: -62px;
     &--index {
+      position: relative;
+      z-index: 0;
+      background-image: url("../img/hero-desktop@1x.jpg");
       min-height: 745px;
       background-position-y: 0;
-      background-size: 115% 100%;
+
+      @media #{$retina} {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: 1150px auto;
+      }
     }
   }
 

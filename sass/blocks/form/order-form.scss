@@ -6,13 +6,12 @@
     outline: none;
     background-color: transparent;
     @include text(19px, 18px);
+    opacity: 0.3;
     &::-webkit-input-placeholder {
       @include text(17px, 18px);
       @media #{$tablet} {
         font-size: 19px;
       }
-      //check ff
-      opacity: 0.3;
     }
   }
 }
@@ -172,8 +171,8 @@
 .order-form__input-text {
   display: block;
   width: 100%;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border: none;
   @include form-input-border;
 }
@@ -181,15 +180,38 @@
 .order-form__group--contacts {
   margin-top: 18px;
   margin-bottom: 33px;
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    opacity: 0.2;
+  }
 }
 
 .order-form__input-tel,
 .order-form__input-email {
   display: block;
   width: 100%;
-  padding-bottom: 14px;
+  padding-bottom: 13px;
   border: none;
+  margin-left: -2px;
   @include form-input-border;
+
+  &:hover + svg {
+    fill: $color-secondary;
+    opacity: 1;
+  }
+
+  &:focus + svg {
+    fill: $color-secondary;
+    opacity: 1;
+  }
+}
+
+.order-form__input-email {
+  margin-top: -2px;
 }
 
 .order-form__textarea {
@@ -238,7 +260,7 @@
 @media #{$tablet} {
   .order-form {
     margin-top: 72px;
-    margin-bottom: 48px;
+    margin-bottom: 45px;
   }
 
   .order-form__promo-text {
@@ -354,13 +376,18 @@
   .order-form__group--contacts {
     margin-top: 0;
     margin-bottom: 0;
+
+    svg {
+      top: 15px;
+      right: 20px;
+    }
   }
 
   .order-form__input-tel {
     width: 501px;
     padding-top: 10px;
     padding-left: 17px;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     margin-bottom: 24px;
     box-sizing: border-box;
   }
@@ -369,6 +396,7 @@
     width: 501px;
     padding-top: 10px;
     padding-left: 17px;
+    padding-bottom: 19px;
 
     box-sizing: border-box;
     margin-bottom: 0;
@@ -444,6 +472,10 @@
     width: 700px;
   }
 
+  .order-form__group--contacts svg {
+    right: 10px;
+  }
+
   .order-form__input-tel,
   .order-form__input-email {
     width: 700px;
@@ -463,9 +495,4 @@
     margin: 0;
     padding-top: 9px;
   }
-
-
-
-
-
 }

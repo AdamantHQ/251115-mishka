@@ -11,10 +11,10 @@
   font-size: 0;
   width: 27px;
   height: 34px;
-  position: relative;
-  &::before {
-    @include bg-image(logo-htmlacademy, 27px, 34px);
-  }
+  fill: $color-secondary;
+
+
+  @include hovers-footer;
 }
 
 @media #{$tablet} {
@@ -26,8 +26,5 @@
   .copyright__link {
     margin-top: -1px;
     margin-left: 30px;
-    &--before {
-
-    }
   }
 }
