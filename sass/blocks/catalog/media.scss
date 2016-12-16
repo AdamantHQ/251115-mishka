@@ -18,42 +18,43 @@
   }
 }
 
+.media__header {
+  position: relative;
+}
+
 .media__title {
   @include title(17px, 24px);
   padding: 23px 40px 25px 90px;
   position: relative;
   margin: 0;
-  &::before {
-    @include bg-image(icon-video, 32px, 32px);
-    left: 33px;
-    top: 30px;
-  }
+}
+
+.media__icon {
+  position: absolute;
+  fill: $color-secondary;
+  left: 33px;
+  top: 30px;
 }
 
 .media__video {
   position: relative;
-  width: 260px;
-  height: 150px;
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 260px;
+    height: auto;
   }
 }
 
 .media__play-btn {
   position: absolute;
   display: block;
-  width: 101px;
-  height: 77px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  background: url("../img/icon-play.svg") no-repeat;
 
   &:hover {
-    transform:  translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.2);
     transition: all 0.2s;
   }
 
@@ -87,7 +88,6 @@
     margin-bottom: 64px;
   }
 
-
   .media__description {
     @include text(15px, 30px);
   }
@@ -95,7 +95,7 @@
   .media__header {
     order: 2;
     width: 584px;
-    margin: 38px auto 33px;
+    margin: 31px auto 33px;
   }
 
   .media__title {
@@ -107,25 +107,25 @@
     }
   }
 
-  .media__video {
+  .media__icon {
+    left: 0;
+    top: -6px;
+  }
+
+  .media__video img {
     width: 668px;
-    height: 455px;
-    img {
-      width: 668px;
-      height: 455px;
-    }
   }
 
   .media__footer {
     width: 584px;
     order: 3;
     margin-top: 0;
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
 
   .media__description {
     padding-right: 0;
-    margin-bottom: 33px;
+    margin-bottom: 35px;
   }
 
   .media__btn {
@@ -142,7 +142,6 @@
 
   .media__content {
     padding-left: 760px;
-    min-height: 455px;
     box-sizing: border-box;
     position: relative;
   }
@@ -152,24 +151,19 @@
     margin: 0 0 34px;
   }
 
+  .media__icon {
+    left: 0;
+    top: 40px;
+  }
+
   .media__title {
     padding-top: 95px;
     padding-left: 0;
-    &::before {
-      left: 0;
-      top: 40px;
-    }
   }
 
   .media__video {
     position: absolute;
     left: 0;
-    width: 668px;
-    height: 455px;
-    img {
-      width: 682px;
-      height: 455px;
-    }
   }
 
   .media__footer {

@@ -21,56 +21,58 @@
   margin: 0;
   padding-top: 85px;
   position: relative;
-  &::before {
-    top: 32px;
-  }
-  &--eco::before {
-    left: 10px;
-    @include bg-image(icon-feature-1, 32px, 37px);
-  }
-  &--price::before {
-    left: 1px;
-    @include bg-image(icon-feature-3, 48px, 27px);
+
+  svg {
+    position: absolute;
   }
 
-  &--like::before {
+  &--eco svg {
+    top: 32px;
     left: 10px;
+  }
+
+  &--price svg {
+    top: 32px;
+    left: 2px;
+  }
+
+  &--like svg {
     top: 36px;
-    @include bg-image(icon-feature-5, 32px, 28px);
+    left: 10px;
   }
 
   &--handmade {
     padding-top: 84px;
-    &::before {
+
+    svg {
+      top: 33px;
       left: 5px;
-      @include bg-image(icon-feature-2, 34px, 34px);
     }
   }
 
-  &--native::before {
-    left: -5px;
+  &--native svg {
     top: 33px;
-    @include bg-image(icon-feature-4, 54px, 23px);
+    left: -4px;
   }
 
   &--gift {
     padding-top: 84px;
-    &::before {
+
+    svg {
       top: 31px;
-      left: 5px;
-      @include bg-image(icon-feature-6, 33px, 32px);
+      left: 4px;
     }
   }
 }
 
 @media #{$tablet} {
   .about__inner {
-    padding: 74px 0;
+    padding: 49px 0 60px;
   }
 
   .about__title {
-    margin-left: -3px;
-    margin-bottom: 20px;
+    margin-left: -4px;
+    margin-bottom: 15px;
     @include title-tablet
   }
 
@@ -85,28 +87,48 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 20px;
-    padding-top: 85px;
+    padding-top: 88px;
+
+    &--eco {
+      svg {
+        top: 35px;
+      }
+    }
+
     &--handmade {
       order: 2;
+      svg {
+        top: 38px;
+        left: 4px;
+      }
     }
 
     &--price {
       order: 3;
+      svg {
+        top: 36px;
+      }
     }
 
     &--like {
       order: 5;
+      svg {
+        top: 40px;
+      }
     }
 
     &--native {
       order: 4;
-      &::before {
-        top: 36px;
+      svg {
+        top: 39px;
       }
     }
 
     &--gift {
       order: 6;
+      svg {
+        top: 37px;
+      }
     }
   }
 }
@@ -115,6 +137,7 @@
   .about__inner {
     width: 700px;
     padding-top: 58px;
+    padding-bottom: 67px;
   }
 
   .about__title {
