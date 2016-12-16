@@ -1,4 +1,4 @@
-.catalog__inner {
+.catalog {
   @include centrify-all;
   display: flex;
   flex-direction: column;
@@ -15,9 +15,6 @@
   .catalog {
     padding-top: 130px;
     margin-bottom: 57px;
-  }
-
-  .catalog__inner{
     flex-direction: row;
   }
 }
