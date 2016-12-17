@@ -144,6 +144,7 @@
     padding-left: 760px;
     box-sizing: border-box;
     position: relative;
+    min-height: 455px;
   }
 
   .media__header {
@@ -164,13 +165,21 @@
   .media__video {
     position: absolute;
     left: 0;
+
+    img {
+      width: 682px;
+    }
+  }
+
+  .media__play-btn {
+    margin-left: 5px;
   }
 
   .media__footer {
     width: 230px;
     margin-left: 0;
     margin-right: 55px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 
   .media__description {
