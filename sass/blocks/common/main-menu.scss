@@ -7,23 +7,11 @@
 .main-menu__btn {
   position: absolute;
   width: 21px;
-  height: 21px;
-  cursor: pointer;
+  height: 20px;
+
   z-index: 1000;
-  &--closed {
-    top: 33px;
-    right: 31px;
-    &::before {
-      @include bg-image(icon-menu-open, 21px, 21px);
-    }
-  }
-  &--opened {
-    top: 30px;
-    right: 30px;
-    &::before {
-      @include bg-image(icon-menu-close, 21px, 21px);
-    }
-  }
+  top: 25px;
+  right: 31px;
 }
 
 @media #{$mobile-only} {

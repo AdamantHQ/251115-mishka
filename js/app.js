@@ -11,8 +11,8 @@ toggleMenu();
 function toggleMenu() {
   mainMenuList.classList.toggle("main-menu__list--opened");
   mainMenuList.classList.toggle("main-menu__list--closed");
-  mainMenuBtn.classList.toggle("main-menu__btn--opened");
-  mainMenuBtn.classList.toggle("main-menu__btn--closed");
+  mainMenuBtn.classList.toggle("hamburger--opened");
+  // mainMenuBtn.classList.toggle("hamburger--closed");
 }
 
 mainMenuBtn.addEventListener("click", function (event) {

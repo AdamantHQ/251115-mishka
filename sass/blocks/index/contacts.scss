@@ -4,14 +4,14 @@
 }
 
 .contacts__inner {
-  @include centrify-all;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 .contacts__title {
-  margin: 0 0 26px -3px;
+  width: 260px;
+  margin: 0 auto 26px auto;
   @include title(18px, 30px);
 }
 
@@ -21,6 +21,8 @@
 
 .contacts__wrapper {
   padding-bottom: 9px;
+  margin: 0 auto;
+  width: 260px;
 }
 
 .contacts__item {
@@ -54,14 +56,13 @@
 }
 
 .contacts__map {
-  position: relative;
-  height: 457px;
-  margin-bottom: 39px;
+  width: 320px;
+  height: auto;
+  margin: 0 auto 39px auto;
+  background: #ece9e2 url("../img/map-fallback.jpg") -200px 0 no-repeat;
 
   iframe {
     border: none;
-    position: absolute;
-    left: -30px;
     height: 457px;
     width: 320px;
   }
@@ -70,6 +71,8 @@
 .contacts__btn {
   @include btn;
   padding-top: 15px;
+  width: 260px;
+  margin: 0 auto;
 }
 
 @media #{$tablet} {
@@ -80,6 +83,7 @@
 
   .contacts__title {
     @include title-tablet;
+    width: 668px;
     position: relative;
     margin-bottom: 50px;
   }
@@ -87,12 +91,13 @@
   .contacts__flag {
     display: block;
     position: absolute;
-    right: 3px;
+    right: 53px;
     top: -14px;
   }
 
   .contacts__wrapper {
     display: flex;
+    width: 668px;
     flex-direction: row;
     align-items: flex-start;
     padding-bottom: 28px;
@@ -108,8 +113,9 @@
   }
 
   .contacts__map {
-    height: 457px;
-    margin-bottom: 55px;
+    width: 768px;
+    margin-bottom: 50px;
+    background-position: 0 0;
 
     iframe {
       height: 457px;
@@ -117,7 +123,6 @@
       left: -50px;
     }
   }
-
 
   .contacts__btn {
     align-self: center;
@@ -136,6 +141,8 @@
 
   .contacts__inner {
     position: relative;
+    width: 1050px;
+    margin: 0 auto;
     min-height: 460px;
     padding-left: 175px;
     box-sizing: border-box;
@@ -144,9 +151,8 @@
 
   .contacts__title {
     @include title-desktop;
-    margin-top: 72px;
-    margin-left: -5px;
-    margin-bottom: 25px;
+    width: auto;
+    margin: 72px 0 25px -5px;
   }
 
   .contacts__flag {
@@ -155,6 +161,7 @@
   }
 
   .contacts__wrapper {
+    margin: 0;
     width: 350px;
     flex-direction: column;
   }
@@ -164,6 +171,8 @@
     width: 525px;
     top: 0;
     right: 0;
+    background-position: -100px 0;
+
     iframe {
       left: 0;
       width: 525px;
@@ -172,6 +181,7 @@
   }
 
   .contacts__btn {
+    margin: 0;
     align-self: flex-start;
   }
 }
