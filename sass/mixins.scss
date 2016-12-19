@@ -131,6 +131,7 @@
 @mixin hovers {
   &:hover {
     opacity: 0.6;
+    -moz-opacity: 0.6;
   }
 
   &:active {

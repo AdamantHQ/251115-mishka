@@ -56,6 +56,8 @@
 }
 
 .contacts__map {
+  //for IE
+  width: 320px;
   margin: 0 auto 39px auto;
   background: #ece9e2 url("../img/map-fallback.jpg") -200px 0 no-repeat;
 }
@@ -111,6 +113,8 @@
   }
 
   .contacts__map {
+    //width for IE
+    width: 768px;
     margin-bottom: 56px;
     background-position: 0 0;
   }
@@ -162,6 +166,8 @@
   }
 
   .contacts__map {
+    //width for IE
+    width: 525px;
     position: absolute;
     top: 0;
     right: 0;

@@ -21,7 +21,6 @@
 }
 
 .catalog-item__description {
-
   padding: 25px 27px 27px;
   display: flex;
   flex-direction: column;
@@ -35,12 +34,14 @@
 }
 
 .catalog-item__title {
-  display: block;
-  @include title(17px, 24px);
-  text-decoration: none;
+  margin-top: 0;
   margin-bottom: 5px;
-
-  @include hovers;
+  @include title(17px, 24px);
+  a {
+    @include title(17px, 24px);
+    text-decoration: none;
+    @include hovers;
+  }
 }
 
 .catalog-item__text {
