@@ -50,7 +50,7 @@
     content: "";
     width: 100%;
     height: 1px;
-    background: $color-secondary;
+    background-color: $color-secondary;
     margin-left: 25px;
   }
 }
@@ -116,6 +116,10 @@
   border-radius: 50%;
 }
 
+.order-form__input-radio:disabled + .order-form__radio::before {
+  border-color: #C7C7C7;
+}
+
 .order-form__group--checkbox {
   display: flex;
   flex-direction: column;
@@ -148,6 +152,10 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+}
+
+.order-form__input-checkbox:disabled + .order-form__checkbox::before {
+  border-color: #C7C7C7;
 }
 
 .order-form__input-checkbox:checked + .order-form__checkbox::after {

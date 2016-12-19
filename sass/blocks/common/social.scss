@@ -2,6 +2,7 @@
   margin: 0;
   border-bottom: 1px solid #e5e5e5;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -9,11 +10,11 @@
 .social__btn {
   position: relative;
   font-size: 0;
+  margin-right: 41px;
 
   @include hovers-footer;
 
   &--instagram {
-    margin-right: 41px;
     width: 22px;
     height: 21px;
   }
@@ -26,8 +27,10 @@
   &--twitter {
     width: 23px;
     height: 20px;
-    margin-right: 6px;
+  }
 
+  &:last-of-type {
+    margin-right: 6px;
   }
 }
 
