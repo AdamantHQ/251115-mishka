@@ -56,16 +56,13 @@
 }
 
 .contacts__map {
-  width: 320px;
-  height: auto;
   margin: 0 auto 39px auto;
   background: #ece9e2 url("../img/map-fallback.jpg") -200px 0 no-repeat;
+}
 
-  iframe {
-    border: none;
-    height: 457px;
-    width: 320px;
-  }
+.contacts__map-container {
+  width: 320px;
+  height: 457px;
 }
 
 .contacts__btn {
@@ -73,6 +70,7 @@
   padding-top: 15px;
   width: 260px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 @media #{$tablet} {
@@ -113,15 +111,12 @@
   }
 
   .contacts__map {
-    width: 768px;
-    margin-bottom: 50px;
+    margin-bottom: 56px;
     background-position: 0 0;
+  }
 
-    iframe {
-      height: 457px;
-      width: 768px;
-      left: -50px;
-    }
+  .contacts__map-container {
+    width: 768px;
   }
 
   .contacts__btn {
@@ -168,16 +163,13 @@
 
   .contacts__map {
     position: absolute;
-    width: 525px;
     top: 0;
     right: 0;
     background-position: -100px 0;
+  }
 
-    iframe {
-      left: 0;
-      width: 525px;
-      height: 457px;
-    }
+  .contacts__map-container {
+    width: 525px;
   }
 
   .contacts__btn {
