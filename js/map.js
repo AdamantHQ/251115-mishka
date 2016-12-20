@@ -11,6 +11,6 @@ function initMap() {
     position: mishka,
     map: map,
     title: "Мишка: Милые штуки ручной работы для дома",
-    icon: "img/icon-map-pin.svg"
+    icon: "/img/icon-map-pin.svg"
   });
 }
