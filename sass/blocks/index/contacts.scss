@@ -10,7 +10,7 @@
 }
 
 .contacts__title {
-  width: 260px;
+  width: 262px;
   margin: 0 auto 26px auto;
   @include title(18px, 30px);
 }
@@ -20,23 +20,27 @@
 }
 
 .contacts__wrapper {
-  padding-bottom: 9px;
+  padding-bottom: 7px;
   margin: 0 auto;
   width: 260px;
 }
 
+.contacts__field {
+  margin-right: 29px;
+}
+
+
 .contacts__item {
   @include text(15px, 30px);
   display: flex;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
-.contacts__field {
-  margin-right: 32px;
-}
+
+
 
 .contacts__link {
-  margin-left: -3px;
+  line-height: 28px;
   border-bottom: 1px solid $color-secondary;
   color: $color-text;
   text-decoration: none;
@@ -110,7 +114,7 @@
   }
 
   .contacts__field {
-    margin-right: 26px;
+    margin-right: 24px;
   }
 
   .contacts__map {
@@ -182,6 +186,7 @@
 
   .contacts__btn {
     margin: 0;
+    outline: none;
     align-self: flex-start;
   }
 }

@@ -251,6 +251,11 @@
     @include text(17px, 18px);
     opacity: 0.3;
   }
+
+  &::-moz-placeholder {
+    @include text(17px, 18px);
+    opacity: 0.3;
+  }
 }
 
 .order-form__footer {
@@ -269,6 +274,7 @@
   @include btn(17px, 100%);
   margin-top: 18px;
   box-sizing: border-box;
+  outline: none;
 }
 
 @media #{$tablet} {
@@ -422,6 +428,9 @@
     min-height: 141px;
     margin-top: 0;
     &::-webkit-input-placeholder {
+      font-size: 19px;
+    }
+    &::-moz-placeholder {
       font-size: 19px;
     }
   }

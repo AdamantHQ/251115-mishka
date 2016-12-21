@@ -37,11 +37,9 @@
   margin-top: 0;
   margin-bottom: 5px;
   @include title(17px, 24px);
-  a {
-    @include title(17px, 24px);
-    text-decoration: none;
-    @include hovers;
-  }
+  display: block;
+  text-decoration: none;
+  @include hovers;
 }
 
 .catalog-item__text {

@@ -60,12 +60,13 @@
   position: absolute;
   left: 30px;
   top: 32px;
-  opacity: 0.2;
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 
 
 .main-menu__link {
+  outline: none;
   display: block;
   padding: 28px 0 28px 75px;
   text-decoration: none;
@@ -81,13 +82,11 @@
 }
 
 .main-menu__link[href]:hover svg {
-  opacity: 1;
   fill: $color-secondary;
 }
 
 .main-menu__link[href]:active svg {
-  opacity: 0.3;
-  fill: $color-secondary;
+  fill: rgba(99, 209, 187, 0.3);
 }
 
 .main-menu__logo {

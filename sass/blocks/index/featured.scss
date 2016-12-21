@@ -63,6 +63,7 @@
 .featured__btn {
   @include btn(17px);
   padding-top: 17px;
+  outline: none;
 }
 
 @media #{$tablet} {

@@ -12,6 +12,7 @@
   display: none;
 }
 
+
 .page-footer__social {
   //for IE instead of min-height;
   &::after {
@@ -37,7 +38,8 @@
 
   .page-footer__logo-link {
     @include hovers-footer;
-
+    display: block;
+    margin-top: -6px;
   }
 
   .page-footer__social {

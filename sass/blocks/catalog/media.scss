@@ -74,7 +74,7 @@
 
 .media__footer {
   width: 192px;
-  margin: 21px auto 32px;
+  margin: 23px auto 32px;
 }
 
 .media__btn {
@@ -153,6 +153,7 @@
     box-sizing: border-box;
     position: relative;
     min-height: 455px;
+    border-left: none;
   }
 
   .media__header {
@@ -171,18 +172,18 @@
   }
 
   .media__video {
+    width: 681px;
     position: absolute;
     left: 0;
 
     img {
-      width: 682px;
+      width: 680px;
     }
   }
 
   .media__play-btn {
     top: 50.6%;
-    left: 52%;
-
+    left: 51.4%;
   }
 
   .media__footer {
