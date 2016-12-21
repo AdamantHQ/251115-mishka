@@ -76,6 +76,7 @@
   }
 
   .category__item {
+
     width: 50%;
 
     &::before {
@@ -103,6 +104,8 @@
   }
 
   .category__link {
+    position: relative;
+    z-index: 2;
     font-size: 20px;
     line-height: 30px;
     padding: 28px 36px 30px;

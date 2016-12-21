@@ -86,6 +86,7 @@
     width: 668px;
     position: relative;
     margin-bottom: 50px;
+
   }
 
   .contacts__flag {
@@ -152,7 +153,7 @@
   .contacts__title {
     @include title-desktop;
     width: auto;
-    margin: 72px 0 25px -5px;
+    margin: 73px 0 27px -5px;
   }
 
   .contacts__flag {
@@ -170,7 +171,7 @@
     //width for IE
     width: 525px;
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0;
     background-position: -100px 0;
   }

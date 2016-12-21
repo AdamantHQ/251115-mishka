@@ -95,7 +95,7 @@
   .media__header {
     order: 2;
     width: 584px;
-    margin: 31px auto 33px;
+    margin: 39px auto 33px;
   }
 
   .media__title {
@@ -112,8 +112,16 @@
     top: -6px;
   }
 
-  .media__video img {
+  .media__video {
     width: 668px;
+    height: 455px;
+    img {
+      width: 668px;
+    }
+  }
+
+  .media__play-btn {
+    top: 52%;
   }
 
   .media__footer {
@@ -172,7 +180,9 @@
   }
 
   .media__play-btn {
-    margin-left: 5px;
+    top: 50.6%;
+    left: 52%;
+
   }
 
   .media__footer {

@@ -279,7 +279,7 @@
 
   .order-form__promo-text {
     @include text(17px, 30px);
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   .order-form__section {
@@ -314,7 +314,7 @@
     margin-bottom: 24px;
 
     &::before {
-      top: 0;
+      top: 2px;
       width: 48px;
       height: 48px;
     }
@@ -322,7 +322,7 @@
 
   .order-form__input-radio:checked + .order-form__radio::after {
     left: 15px;
-    top: 15px;
+    top: 17px;
     width: 22px;
     height: 22px;
   }
@@ -341,7 +341,7 @@
     width: 170px;
 
     &::before {
-      top: 0;
+      top: 2px;
       left: 0;
       width: 50px;
       height: 48px;
@@ -360,7 +360,7 @@
 
   .order-form__input-checkbox:checked + .order-form__checkbox::after {
     left: 12px;
-    top: 12px;
+    top: 13px;
     width: 30px;
     height: 16px;
   }
@@ -369,7 +369,7 @@
     margin-top: 0;
     width: 501px;
     display: flex;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
     &:first-of-type {
       margin-top: 0;
     }
@@ -383,6 +383,7 @@
   .order-form__input-text {
     padding-left: 16px;
     padding-top: 12px;
+    padding-bottom: 13px;
     width: 100%;
     margin: 0;
   }
@@ -399,9 +400,9 @@
 
   .order-form__input-tel {
     width: 501px;
-    padding-top: 10px;
+    padding-top: 11px;
     padding-left: 17px;
-    padding-bottom: 16px;
+    padding-bottom: 12px;
     margin-bottom: 24px;
     box-sizing: border-box;
   }
@@ -410,7 +411,7 @@
     width: 501px;
     padding-top: 10px;
     padding-left: 17px;
-    padding-bottom: 19px;
+    padding-bottom: 17px;
 
     box-sizing: border-box;
     margin-bottom: 0;
@@ -426,6 +427,7 @@
   }
 
   .order-form__footer {
+    margin-top: 3px;
     margin-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
@@ -435,7 +437,7 @@
   .order-form__footnote {
     order: 1;
     @include text(17px, 30px);
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   .order-form__btn {
@@ -447,19 +449,18 @@
 
 @media #{$desktop} {
   .order-form {
-    margin-top: 124px;
+    margin-top: 120px;
     margin-bottom: 47px;
   }
 
   .order-form__promo-text {
     width: 700px;
-    padding-left: 6px;
     margin-bottom: 6px;
   }
 
   .order-form__title {
-    width: 178px;
-    padding-left: 65px;
+    width: 175px;
+    padding-left: 63px;
     box-sizing: border-box;
   }
 
@@ -487,7 +488,8 @@
   }
 
   .order-form__group--contacts svg {
-    right: 10px;
+    right: 3px;
+    top: 10px;
   }
 
   .order-form__input-tel,
@@ -495,14 +497,23 @@
     width: 700px;
   }
 
+  .order-form__input-tel {
+    padding-bottom: 12px;
+  }
+
+  .order-form__input-email {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+
   .order-form__textarea {
     width: 700px;
   }
 
   .order-form__footer {
     width: 700px;
-    position: relative;
-    left: 3px;
+    margin-top: 0;
   }
 
   .order-form__footnote {

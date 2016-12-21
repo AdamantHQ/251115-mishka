@@ -73,23 +73,22 @@
 @media #{$tablet} {
   .catalog-item {
     margin-top: 54px;
-  }
-
-  .catalog-item {
     flex-direction: row;
   }
 
   .catalog-item__link {
-    width: 334px;
-    height: 334px;
+    width: 332px;
+    height: 332px;
   }
 
   .catalog-item__picture {
     width: 334px;
     height: auto;
+    overflow: hidden;//to match size with borders
   }
 
   .catalog-item__description {
+    padding-bottom: 24px;
     box-sizing: border-box;
     width: 334px;
     justify-content: space-between;
@@ -98,6 +97,10 @@
   .catalog-item__title {
     font-size: 20px;
     margin-bottom: 6px;
+
+    a {
+      font-size: 20px;
+    }
   }
 
   .catalog-item__text {
@@ -105,8 +108,8 @@
   }
 
   .catalog-item__description-footer {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0 5px 2px;
+
   }
 
   .catalog-item__price {
@@ -145,7 +148,7 @@
   }
 
   .catalog-item__description {
-    padding-top: 27px;
+    padding-top: 25px;
     width: 316px;
   }
 
