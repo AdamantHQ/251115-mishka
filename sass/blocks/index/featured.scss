@@ -9,7 +9,7 @@
 }
 
 .featured__header {
-  margin-bottom: 21px;
+  margin-bottom: 25px;
 }
 
 .featured__title {
@@ -19,6 +19,8 @@
 
 .featured__label {
   @include subheader;
+  display: block;
+  margin-top: 7px;
 }
 
 .featured__text {

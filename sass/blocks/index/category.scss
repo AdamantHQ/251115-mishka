@@ -57,9 +57,15 @@
   @include text(19px, 24px, 700, $color-contrast);
   position: relative;
   background-color: inherit;
+  display: flex;
+  justify-content: space-between;
 
   &:active {
     color: $color-contrast-active;
+  }
+
+  span {
+    width: 150px;
   }
 }
 
