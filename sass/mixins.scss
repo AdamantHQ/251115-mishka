@@ -139,11 +139,12 @@
 }
 
 @mixin hovers-footer {
-  &:hover {
+  &:hover svg {
     fill: $color-footer;
   }
 
-  &:active {
+  &:active svg {
     opacity: 0.3;
+    pointer-events: none;
   }
 }

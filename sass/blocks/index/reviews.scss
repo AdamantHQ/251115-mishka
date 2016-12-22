@@ -73,11 +73,6 @@
   &:active svg {
     opacity: 0.3;
   }
-
-  svg {
-    @include hovers;
-  }
-
 }
 
 .reviews__btn {
