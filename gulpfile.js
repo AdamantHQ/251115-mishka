@@ -108,4 +108,3 @@ gulp.task("build", function(fn) {
     "svgSprite",
   fn);
 });
-

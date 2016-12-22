@@ -78,6 +78,7 @@
 .reviews__btn {
   @include btn;
   outline: none;
+
 }
 
 @media #{$tablet} {
@@ -111,8 +112,9 @@
   .reviews__btn {
     width: auto;
     max-width: 300px;
-    padding-left: 38px;
-    padding-right: 38px;
+    padding-bottom: 16px;
+    padding-left: 40px;
+    padding-right: 36px;
     font-size: 17px;
   }
 

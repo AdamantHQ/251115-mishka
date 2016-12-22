@@ -8,10 +8,7 @@
 }
 
 .category__item {
-  position: relative;
-
   svg {
-    position: absolute;
     opacity: 0.5;
   }
 
@@ -28,9 +25,9 @@
 .category__item--interior {
   background-color: $color-secondary;
 
+
   svg {
-    top: 23px;
-    right: 37px;
+    margin-top: 2px;
   }
 
   &:hover {
@@ -42,8 +39,8 @@
   background-color: #56c3b2;
 
   svg {
-    top: 20px;
-    right: 28px;
+    margin-top: 3px;
+    margin-right: -2px;
   }
 
   &:hover {
@@ -66,7 +63,7 @@
 
   span {
     display: block;
-    width: 150px;
+    width: 180px;
   }
 }
 
@@ -78,7 +75,7 @@
 
   .category__item {
 
-    width: 50%;
+    width: 334px;
 
     &::before {
       content: "";
@@ -114,7 +111,10 @@
 }
 
 @media #{$desktop} {
-  .category__item::before {
+  .category__item {
     width: 525px;
+    &::before {
+      width: 525px;
+    }
   }
 }

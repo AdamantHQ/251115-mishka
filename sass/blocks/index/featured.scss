@@ -68,7 +68,7 @@
 
 @media #{$tablet} {
   .featured {
-    margin-top: 45px;
+    margin-top: 40px;
     padding-bottom: 67px;
   }
 
@@ -157,11 +157,12 @@
     padding-left: 175px;
     width: 875px;
     position: relative;
-    min-height: 636px;
+    min-height: 633px;
   }
 
   .featured__header {
     margin-top: 52px;
+    margin-bottom: 48px;
     z-index: 2;
     position: relative;
 
@@ -174,14 +175,15 @@
   .featured__label {
     position: absolute;
     left: -155px;
+    margin-top: 0;
   }
 
   .featured__text {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   .featured__price {
-    padding-bottom: 32px;
+    padding-bottom: 35px;
     padding-left: 35px;
   }
 
