@@ -2,7 +2,9 @@
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-
+  @include border(full);
+  box-sizing: border-box;
+  overflow: hidden;
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
@@ -19,7 +21,6 @@
 }
 
 .catalog-item__description {
-  @include border(full);
   padding: 25px 27px 27px;
   display: flex;
   flex-direction: column;
@@ -33,11 +34,11 @@
 }
 
 .catalog-item__title {
-  display: block;
-  @include title(17px, 24px);
-  text-decoration: none;
+  margin-top: 0;
   margin-bottom: 5px;
-
+  @include title(17px, 24px);
+  display: block;
+  text-decoration: none;
   @include hovers;
 }
 
@@ -70,23 +71,22 @@
 @media #{$tablet} {
   .catalog-item {
     margin-top: 54px;
-  }
-
-  .catalog-item {
     flex-direction: row;
   }
 
   .catalog-item__link {
-    width: 334px;
-    height: 334px;
+    width: 332px;
+    height: 332px;
   }
 
   .catalog-item__picture {
     width: 334px;
     height: auto;
+    overflow: hidden;//to match size with borders
   }
 
   .catalog-item__description {
+    padding-bottom: 24px;
     box-sizing: border-box;
     width: 334px;
     justify-content: space-between;
@@ -95,6 +95,10 @@
   .catalog-item__title {
     font-size: 20px;
     margin-bottom: 6px;
+
+    a {
+      font-size: 20px;
+    }
   }
 
   .catalog-item__text {
@@ -102,8 +106,8 @@
   }
 
   .catalog-item__description-footer {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0 5px 2px;
+
   }
 
   .catalog-item__price {
@@ -114,13 +118,17 @@
 
 @media #{$desktop} {
   .catalog-item {
-    flex-direction: column;
+    flex-wrap: wrap;
 
     width: 316px;
-    margin-top: 0;
     margin-right: 51px;
-    &:last-child {
+
+    &:nth-child(3n) {
       margin-right: 0;
+    }
+
+    &:nth-child(-n+3) {
+      margin-top: 0;
     }
   }
 
@@ -137,14 +145,14 @@
     margin: 0;
   }
 
-  .catalog-item__description-header {
-    margin-bottom: 12px;
+  .catalog-item__description {
+    padding-top: 25px;
+    width: 316px;
   }
 
-  .catalog-item__description {
-    padding-top: 27px;
-    width: 316px;
-    height: 198px;
+  .catalog-item__description-header {
+    margin-bottom: 12px;
+    min-height: 85px;
   }
 
   .catalog-item__description-footer {

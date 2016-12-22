@@ -7,23 +7,11 @@
 .main-menu__btn {
   position: absolute;
   width: 21px;
-  height: 21px;
-  cursor: pointer;
+  height: 20px;
+  outline: none;
   z-index: 1000;
-  &--closed {
-    top: 33px;
-    right: 31px;
-    &::before {
-      @include bg-image(icon-menu-open, 21px, 21px);
-    }
-  }
-  &--opened {
-    top: 30px;
-    right: 30px;
-    &::before {
-      @include bg-image(icon-menu-close, 21px, 21px);
-    }
-  }
+  top: 25px;
+  right: 31px;
 }
 
 @media #{$mobile-only} {
@@ -58,7 +46,6 @@
 }
 
 .main-menu__item {
-  padding: 28px 0 28px 75px;
   @include border(bottom);
   position: relative;
 
@@ -73,13 +60,15 @@
   position: absolute;
   left: 30px;
   top: 32px;
-  opacity: 0.2;
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 
 
 .main-menu__link {
+  outline: none;
   display: block;
+  padding: 28px 0 28px 75px;
   text-decoration: none;
   @include title(17px, 24px);
 }
@@ -93,7 +82,6 @@
 }
 
 .main-menu__link[href]:hover svg {
-  opacity: 1;
   fill: $color-secondary;
 }
 
@@ -148,18 +136,19 @@
 
     &--catalog,
     &--form {
-      padding: 19px 0;
+
       margin-right: 36px;
       order: 2;
 
       .main-menu__link {
         font-size: 15px;
+        padding: 19px 0;
       }
     }
 
     &--search {
       order: 1;
-      padding: 0;
+
       align-self: stretch;
       width: 82px;
       @include border(left);
@@ -172,18 +161,22 @@
 
       .main-menu__link {
         font-size: 0;
+        padding: 30px;
       }
     }
 
     &--cart {
-      padding: 31px 0 33px 80px;
       order: 1;
-      width: 184px;
+      width: 264px;
       text-align: right;
 
       svg {
         top: 35px;
         left: 32px;
+      }
+
+      .main-menu__link {
+        padding: 31px 0 33px 80px;
       }
     }
   }
@@ -213,8 +206,9 @@
     &--catalog,
     &--form {
       order: 0;
-      padding: 28px 0;
+
       .main-menu__link {
+        padding: 30px 0 34px;
         @include title(17px, 24px);
         &--active {
           color: #7f6d62;
@@ -224,10 +218,12 @@
 
     &--catalog {
       width: 185px;
+      margin-right: 32px;
       @include border(right);
     }
+
     &--form {
-      width: 230px;
+      width: 234px;
       margin-right: 0;
     }
 
@@ -238,9 +234,10 @@
     &--promo {
       order: 2;
       width: 185px;
-      padding: 19px 0;
+
       margin-right: 35px;
       .main-menu__link {
+        padding: 19px 0;
         @include title(15px, 24px);
       }
     }

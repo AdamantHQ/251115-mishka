@@ -12,6 +12,7 @@
   display: none;
 }
 
+
 .page-footer__social {
   //for IE instead of min-height;
   &::after {
@@ -32,18 +33,23 @@
   .page-footer__logo {
     width: 223px;
     display: block;
+    margin: 0;
   }
 
   .page-footer__logo-link {
     @include hovers-footer;
+    display: block;
+    margin-top: -6px;
+
 
   }
 
   .page-footer__social {
-    width: 222px;
+
   }
 
   .page-footer__copyright {
     width: 223px;
   }
 }
+

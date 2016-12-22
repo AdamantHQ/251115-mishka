@@ -74,7 +74,7 @@
 
 .media__footer {
   width: 192px;
-  margin: 27px auto 32px;
+  margin: 23px auto 32px;
 }
 
 .media__btn {
@@ -95,7 +95,7 @@
   .media__header {
     order: 2;
     width: 584px;
-    margin: 31px auto 33px;
+    margin: 39px auto 33px;
   }
 
   .media__title {
@@ -112,8 +112,16 @@
     top: -6px;
   }
 
-  .media__video img {
+  .media__video {
     width: 668px;
+    height: 455px;
+    img {
+      width: 668px;
+    }
+  }
+
+  .media__play-btn {
+    top: 52%;
   }
 
   .media__footer {
@@ -144,6 +152,8 @@
     padding-left: 760px;
     box-sizing: border-box;
     position: relative;
+    min-height: 455px;
+    border-left: none;
   }
 
   .media__header {
@@ -162,15 +172,25 @@
   }
 
   .media__video {
+    width: 682px;
     position: absolute;
     left: 0;
+
+    img {
+      width: 682px;
+    }
+  }
+
+  .media__play-btn {
+    top: 50.6%;
+    left: 51.4%;
   }
 
   .media__footer {
     width: 230px;
     margin-left: 0;
     margin-right: 55px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 
   .media__description {
