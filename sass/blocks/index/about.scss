@@ -67,7 +67,7 @@
 
 @media #{$tablet} {
   .about__inner {
-    padding: 49px 0 60px;
+    padding: 50px 0 60px;
   }
 
   .about__title {
@@ -80,6 +80,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: flex-end;
+    margin-left: 1px;
   }
 
   .about__list-item {
