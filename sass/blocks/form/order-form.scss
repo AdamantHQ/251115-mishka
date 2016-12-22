@@ -1,5 +1,4 @@
 .order-form {
-
   margin-top: 22px;
   margin-bottom: 30px;
 }
@@ -8,22 +7,8 @@
 .order-form textarea {
   outline: none;
   background-color: transparent;
-  //against criteria, but auto-prefixer doesn't do it
-  &::-webkit-input-placeholder {
-    @include text(17px, 18px, 400, rgba(0, 0, 0, 0.3));
-    @media #{$tablet} {
-      font-size: 19px;
-    }
-  }
-
-  &:-ms-input-placeholder {
-    @include text(17px, 18px, 400, rgba(0, 0, 0, 0.3));
-    @media #{$tablet} {
-      font-size: 19px;
-    }
-  }
-
-  &::-moz-placeholder {
+  //autoprefixer supports this
+  &::placeholder {
     @include text(17px, 18px, 400, rgba(0, 0, 0, 0.3));
     @media #{$tablet} {
       font-size: 19px;
@@ -34,9 +19,6 @@
 .order-form label {
   cursor: pointer;
 }
-
-
-
 
 .order-form__promo-text {
   @include centrify-all;
@@ -434,12 +416,6 @@
     width: 501px;
     min-height: 141px;
     margin-top: 0;
-    &::-webkit-input-placeholder {
-      font-size: 19px;
-    }
-    &::-moz-placeholder {
-      font-size: 19px;
-    }
   }
 
   .order-form__footer {
