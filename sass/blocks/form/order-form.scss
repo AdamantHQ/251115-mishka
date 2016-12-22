@@ -2,25 +2,41 @@
 
   margin-top: 22px;
   margin-bottom: 30px;
-  input {
-    outline: none;
-    background-color: transparent;
-    @include text(19px, 18px);
-    opacity: 0.3;
-    &::-webkit-input-placeholder {
-      @include text(17px, 18px);
-      @media #{$tablet} {
-        font-size: 19px;
-      }
+}
+
+.order-form input,
+.order-form textarea {
+  outline: none;
+  background-color: transparent;
+  //against criteria, but auto-prefixer doesn't do it
+  &::-webkit-input-placeholder {
+    @include text(17px, 18px, 400, rgba(0, 0, 0, 0.3));
+    @media #{$tablet} {
+      font-size: 19px;
     }
   }
 
-  label {
-    cursor: pointer;
+  &:-ms-input-placeholder {
+    @include text(17px, 18px, 400, rgba(0, 0, 0, 0.3));
+    @media #{$tablet} {
+      font-size: 19px;
+    }
   }
 
-
+  &::-moz-placeholder {
+    @include text(17px, 18px, 400, rgba(0, 0, 0, 0.3));
+    @media #{$tablet} {
+      font-size: 19px;
+    }
+  }
 }
+
+.order-form label {
+  cursor: pointer;
+}
+
+
+
 
 .order-form__promo-text {
   @include centrify-all;
@@ -247,15 +263,6 @@
   box-sizing: border-box;
   width: 260px;
   min-height: 142px;
-  &::-webkit-input-placeholder {
-    @include text(17px, 18px);
-    opacity: 0.3;
-  }
-
-  &::-moz-placeholder {
-    @include text(17px, 18px);
-    opacity: 0.3;
-  }
 }
 
 .order-form__footer {
