@@ -1,5 +1,6 @@
 .hamburger {
   display: inline-block;
+  vertical-align: top;
   cursor: pointer;
   border: 0;
   margin: 0;
@@ -12,6 +13,7 @@
   width: 21px;
   height: 20px;
   display: inline-block;
+  vertical-align: top;
   position: relative;
 }
 
